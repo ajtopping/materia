@@ -192,6 +192,10 @@
     <ClInclude Include="rProjectionMatrixFactory.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="ShaderProgram.h" />
+    <ClInclude Include="ssBinaryTree.h" />
+    <ClInclude Include="ssDirectedNode.h" />
+    <ClInclude Include="ssLinkedList.h" />
+    <ClInclude Include="ssLinkedListOrderedAccessor.h" />
     <ClInclude Include="VertexShader.h" />
     <ClInclude Include="wWindow.h" />
   </ItemGroup>
