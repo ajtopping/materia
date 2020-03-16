@@ -196,6 +196,8 @@
     <ClInclude Include="ssDirectedNode.h" />
     <ClInclude Include="ssLinkedList.h" />
     <ClInclude Include="ssLinkedListOrderedAccessor.h" />
+    <ClInclude Include="ssRectangle.h" />
+    <ClInclude Include="ssRectangleSpace.h" />
     <ClInclude Include="VertexShader.h" />
     <ClInclude Include="wWindow.h" />
   </ItemGroup>
@@ -229,6 +231,8 @@
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="ShaderProgram.cpp" />
     <ClCompile Include="ssLinkedListOrderedAccessor.cpp" />
+    <ClCompile Include="ssRectangle.cpp" />
+    <ClCompile Include="ssRectangleSpace.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="dots.frag">

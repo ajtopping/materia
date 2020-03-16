@@ -156,6 +156,12 @@
     <ClInclude Include="ssLinkedListOrderedAccessor.h">
       <Filter>Header Files\spatial_search</Filter>
     </ClInclude>
+    <ClInclude Include="ssRectangle.h">
+      <Filter>Header Files\spatial_search</Filter>
+    </ClInclude>
+    <ClInclude Include="ssRectangleSpace.h">
+      <Filter>Header Files\spatial_search</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -228,6 +234,12 @@
       <Filter>Source Files\renderer</Filter>
     </ClCompile>
     <ClCompile Include="ssLinkedListOrderedAccessor.cpp">
+      <Filter>Source Files\spatial_search</Filter>
+    </ClCompile>
+    <ClCompile Include="ssRectangle.cpp">
+      <Filter>Source Files\spatial_search</Filter>
+    </ClCompile>
+    <ClCompile Include="ssRectangleSpace.cpp">
       <Filter>Source Files\spatial_search</Filter>
     </ClCompile>
   </ItemGroup>
