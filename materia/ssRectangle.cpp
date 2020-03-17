@@ -10,7 +10,7 @@ ssRectangle::ssRectangle(float x1, float y1, float x2, float y2)
 	set_bounds(x1, y1, x2, y2);
 }
 
-bool operator== (ssRectangle & lhs, ssRectangle & rhs)
+bool operator== (const ssRectangle& lhs, const ssRectangle& rhs)
 {
 	return lhs.id_ == rhs.id_;
 }

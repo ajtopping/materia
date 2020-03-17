@@ -5,7 +5,7 @@ class ssRectangle
 public:
 	ssRectangle(float, float, float, float);
 
-	friend bool operator== (ssRectangle & lhs, ssRectangle & rhs);
+	friend bool operator== (const ssRectangle& lhs, const ssRectangle& rhs);
 
 	void set_bounds(float, float, float, float);
 
