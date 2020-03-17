@@ -13,6 +13,8 @@ public:
 	float get_right() { return right_; }
 	float get_top() { return top_; }
 	float get_bottom() { return bottom_; }
+
+	int get_id() { return id_; }
 private:
 	static int NEXT_GUID_();
 	static int guid_;
