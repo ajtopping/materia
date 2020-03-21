@@ -37,3 +37,6 @@
 # Debug Builds
 materia/Debug/
 Debug/
+
+# Google Test
+packages/
