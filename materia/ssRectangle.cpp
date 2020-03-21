@@ -1,18 +1,17 @@
 
 #include "ssRectangle.h"
 
-int ssRectangle::guid_ = 0;
 
 ssRectangle::ssRectangle(float x1, float y1, float x2, float y2)
 {
-	id_ = ssRectangle::NEXT_GUID_();
+	UuidCreate(&uuid_);
 
 	set_bounds(x1, y1, x2, y2);
 }
 
 bool operator== (const ssRectangle& lhs, const ssRectangle& rhs)
 {
-	return lhs.id_ == rhs.id_;
+	return lhs.uuid_ == rhs.uuid_;
 }
 
 void ssRectangle::set_bounds(float x1, float y1, float x2, float y2)
@@ -38,9 +37,4 @@ void ssRectangle::set_bounds(float x1, float y1, float x2, float y2)
 		bottom_ = y2;
 		top_ = y1;
 	}
-}
-
-int ssRectangle::NEXT_GUID_()
-{
-	return ssRectangle::guid_++;
 }

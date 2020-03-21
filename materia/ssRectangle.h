@@ -1,5 +1,7 @@
 #pragma once
 
+#include <rpc.h>
+
 class ssRectangle
 {
 public:
@@ -14,15 +16,12 @@ public:
 	float get_top() { return top_; }
 	float get_bottom() { return bottom_; }
 
-	int get_id() { return id_; }
+	UUID get_uuid() { return uuid_; }
 private:
-	static int NEXT_GUID_();
-	static int guid_;
-
-	int id_;
-
 	float left_ = 0.0f;
 	float right_ = 1.0f;
 	float top_ = 1.0f;
 	float bottom_ = 0.0f;
+
+	UUID uuid_;
 };

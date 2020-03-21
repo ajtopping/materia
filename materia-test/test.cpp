@@ -3,13 +3,13 @@
 #include "../materia/ssRectangle.h"
 #include "../materia/ssRectangle.cpp"
 
-TEST(TestCaseName, TestName) {
-  EXPECT_EQ(1, 1);
-  EXPECT_TRUE(true);
-}
-
-TEST(Test, Test)
+TEST(ssRectangleTest, SameBoundsWithInputPointsInReverseOrder)
 {
-	ssRectangle rectangle = ssRectangle(0.0f, 0.0f, 1.0f, 1.0f);
-	EXPECT_GE(rectangle.get_id(), 0);
+	ssRectangle rectangle0 = ssRectangle(0.0f, 0.0f, 1.0f, 1.0f);
+	ssRectangle rectangle1 = ssRectangle(1.0f, 1.0f, 0.0f, 0.0f);
+
+	EXPECT_EQ(rectangle0.get_left(), rectangle1.get_left());
+	EXPECT_EQ(rectangle0.get_right(), rectangle1.get_right());
+	EXPECT_EQ(rectangle0.get_top(), rectangle1.get_top());
+	EXPECT_EQ(rectangle0.get_bottom(), rectangle1.get_bottom());
 }
