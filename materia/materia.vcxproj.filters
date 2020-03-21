@@ -40,6 +40,12 @@
     <Filter Include="Source Files\data">
       <UniqueIdentifier>{5e8fe3d8-37e5-4093-a44a-9f7a12691814}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\spatial_search">
+      <UniqueIdentifier>{35dda1df-0b00-48e3-bb85-9c1e55163e16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\spatial_search">
+      <UniqueIdentifier>{d2afab47-eac0-4ad5-9caf-ef46f0c36490}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -138,6 +144,24 @@
     <ClInclude Include="rProjectionMatrixFactory.h">
       <Filter>Header Files\renderer</Filter>
     </ClInclude>
+    <ClInclude Include="ssBinaryTree.h">
+      <Filter>Header Files\spatial_search</Filter>
+    </ClInclude>
+    <ClInclude Include="ssLinkedList.h">
+      <Filter>Header Files\spatial_search</Filter>
+    </ClInclude>
+    <ClInclude Include="ssDirectedNode.h">
+      <Filter>Header Files\spatial_search</Filter>
+    </ClInclude>
+    <ClInclude Include="ssLinkedListOrderedAccessor.h">
+      <Filter>Header Files\spatial_search</Filter>
+    </ClInclude>
+    <ClInclude Include="ssRectangle.h">
+      <Filter>Header Files\spatial_search</Filter>
+    </ClInclude>
+    <ClInclude Include="ssRectangleSpace.h">
+      <Filter>Header Files\spatial_search</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -208,6 +232,15 @@
     </ClCompile>
     <ClCompile Include="rProjectionMatrixFactory.cpp">
       <Filter>Source Files\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="ssLinkedListOrderedAccessor.cpp">
+      <Filter>Source Files\spatial_search</Filter>
+    </ClCompile>
+    <ClCompile Include="ssRectangle.cpp">
+      <Filter>Source Files\spatial_search</Filter>
+    </ClCompile>
+    <ClCompile Include="ssRectangleSpace.cpp">
+      <Filter>Source Files\spatial_search</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
