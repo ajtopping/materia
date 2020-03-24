@@ -46,6 +46,21 @@
     <Filter Include="Source Files\spatial_search">
       <UniqueIdentifier>{d2afab47-eac0-4ad5-9caf-ef46f0c36490}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\input">
+      <UniqueIdentifier>{60625268-14f1-4419-9885-7b132de777fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\association_model">
+      <UniqueIdentifier>{dbf3c23e-a84c-4600-aecb-b0e224e0dd0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\entity">
+      <UniqueIdentifier>{d7559248-f97f-461d-adda-523d3c9b0aa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\entity">
+      <UniqueIdentifier>{6f1f2a87-dde4-404e-92d9-a8ee8a806478}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\association_model">
+      <UniqueIdentifier>{d90cf9d7-9f5b-42e1-84b9-88fbf5bb8c6c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -162,6 +177,21 @@
     <ClInclude Include="ssRectangleSpace.h">
       <Filter>Header Files\spatial_search</Filter>
     </ClInclude>
+    <ClInclude Include="i_OnClick.h">
+      <Filter>Header Files\input</Filter>
+    </ClInclude>
+    <ClInclude Include="am_S_ssRectangle_entComposition.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="am_S_Guid_entComposition.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="entComposition.h">
+      <Filter>Header Files\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="am_S_UniqueUuidAssociator.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -241,6 +271,12 @@
     </ClCompile>
     <ClCompile Include="ssRectangleSpace.cpp">
       <Filter>Source Files\spatial_search</Filter>
+    </ClCompile>
+    <ClCompile Include="am_S_Guid_entComposition.cpp">
+      <Filter>Source Files\association_model</Filter>
+    </ClCompile>
+    <ClCompile Include="am_S_UniqueUuidAssociator.cpp">
+      <Filter>Source Files\association_model</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
