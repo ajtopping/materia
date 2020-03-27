@@ -192,6 +192,18 @@
     <ClInclude Include="am_S_UniqueUuidAssociator.h">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
+    <ClInclude Include="entDebugger.h">
+      <Filter>Header Files\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="amUuidHasher.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="amUuidEquator.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="amUuid.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -277,6 +289,9 @@
     </ClCompile>
     <ClCompile Include="am_S_UniqueUuidAssociator.cpp">
       <Filter>Source Files\association_model</Filter>
+    </ClCompile>
+    <ClCompile Include="entDebugger.cpp">
+      <Filter>Source Files\entity</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

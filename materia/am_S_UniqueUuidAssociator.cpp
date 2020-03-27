@@ -11,20 +11,20 @@ am_S_UniqueUuidAssociator * am_S_UniqueUuidAssociator::get_instance()
 	return instance_;
 }
 
-void am_S_UniqueUuidAssociator::insert(UUID uuid1, UUID uuid2)
+void am_S_UniqueUuidAssociator::insert(amUuid uuid1, amUuid uuid2)
 {
 	this->dictionary_.insert_or_assign(uuid1, uuid2);
 }
 
-UUID am_S_UniqueUuidAssociator::find(UUID uuid)
+amUuid am_S_UniqueUuidAssociator::find(amUuid uuid)
 {
-	try
+
+	if (this->dictionary_.count(uuid) == 0)
+	{
+		return amUuid(0);
+	}
+	else
 	{
 		return this->dictionary_.at(uuid);
-	}
-	catch (std::exception e)
-	{
-		fprintf(stdout, "Could not find UUID that maps to UUID '%lX%lX%lX%lX' in the dictionary! Returning nullptr...\n", uuid.Data1, uuid.Data2, uuid.Data3, uuid.Data4);
-		return NULL;
 	}
 }

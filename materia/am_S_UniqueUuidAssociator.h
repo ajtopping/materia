@@ -8,7 +8,7 @@
 /// </remarks>
 
 #include <unordered_map>
-#include <rpc.h>
+#include "amUuid.h"
 
 class am_S_UniqueUuidAssociator
 {
@@ -17,12 +17,12 @@ public:
 	void operator=(am_S_UniqueUuidAssociator const&) = delete;
 
 	static am_S_UniqueUuidAssociator * get_instance();
-	void insert(UUID, UUID);
-	UUID find(UUID);
+	void insert(amUuid, amUuid);
+	amUuid find(amUuid);
 private:
 	am_S_UniqueUuidAssociator() {};
 
-	std::unordered_map<UUID, UUID> dictionary_;
+	std::unordered_map<amUuid, amUuid, amUuidHasher> dictionary_;
 
 	static am_S_UniqueUuidAssociator * instance_;
 };

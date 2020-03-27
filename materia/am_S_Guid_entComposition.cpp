@@ -13,10 +13,10 @@ am_S_Guid_entComposition * am_S_Guid_entComposition::get_instance()
 
 void am_S_Guid_entComposition::insert(entComposition & ent)
 {
-	this->dictionary_.insert_or_assign(ent.get_uuid(), ent);
+	this->dictionary_.insert_or_assign(ent.get_uuid(), &ent);
 }
 
-entComposition * am_S_Guid_entComposition::find(UUID uuid)
+entComposition * am_S_Guid_entComposition::find(amUuid uuid)
 {
 	try
 	{
@@ -24,7 +24,7 @@ entComposition * am_S_Guid_entComposition::find(UUID uuid)
 	}
 	catch (std::exception e)
 	{
-		fprintf(stdout, "Could not find entComposition with UUID '%lX%lX%lX%lX' in the dictionary! Returning nullptr...\n", uuid.Data1, uuid.Data2, uuid.Data3, uuid.Data4);
+		fprintf(stdout, "Could not find entComposition with UUID '%llX' in the dictionary! Returning nullptr...\n", uuid.get_data());
 		return nullptr;
 	}
 }

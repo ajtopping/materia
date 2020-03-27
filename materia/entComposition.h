@@ -1,12 +1,11 @@
 #pragma once
 
-#include <rpc.h>
+#include "amUuid.h"
 
 class entComposition
 {
 public:
-	entComposition() { UuidCreate(&uuid_); }
-	UUID get_uuid() { return uuid_; }
+	amUuid get_uuid() const { return uuid_; }
 private:
-	UUID uuid_;
+	amUuid uuid_;
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-#include <rpc.h>
+#include "amUuid.h"
 
 class ssRectangle
 {
@@ -16,12 +16,12 @@ public:
 	float get_top() { return top_; }
 	float get_bottom() { return bottom_; }
 
-	UUID get_uuid() { return uuid_; }
+	amUuid get_uuid() { return uuid_; }
 private:
 	float left_ = 0.0f;
 	float right_ = 1.0f;
 	float top_ = 1.0f;
 	float bottom_ = 0.0f;
 
-	UUID uuid_;
+	amUuid uuid_ = amUuid();
 };

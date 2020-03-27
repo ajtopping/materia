@@ -9,7 +9,8 @@
 
 #include <unordered_map>
 #include <string>
-#include <rpc.h>
+
+#include "amUuid.h"
 
 #include "entComposition.h"
 
@@ -21,11 +22,11 @@ public:
 	
 	static am_S_Guid_entComposition * get_instance();
 	void insert(entComposition &);
-	entComposition * find(UUID);
+	entComposition * find(amUuid);
 private:
 	am_S_Guid_entComposition() {};
 
-	std::unordered_map<UUID, entComposition *> dictionary_;
+	std::unordered_map<amUuid, entComposition *, amUuidHasher> dictionary_;
 
 	static am_S_Guid_entComposition * instance_;
 };

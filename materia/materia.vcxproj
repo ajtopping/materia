@@ -162,6 +162,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="amUuid.h" />
+    <ClInclude Include="amUuidEquator.h" />
+    <ClInclude Include="amUuidHasher.h" />
     <ClInclude Include="am_S_Guid_entComposition.h" />
     <ClInclude Include="am_S_ssRectangle_entComposition.h" />
     <ClInclude Include="am_S_UniqueUuidAssociator.h" />
@@ -173,6 +176,7 @@
     <ClInclude Include="dDataType.h" />
     <ClInclude Include="dVertexSet2f.h" />
     <ClInclude Include="entComposition.h" />
+    <ClInclude Include="entDebugger.h" />
     <ClInclude Include="filetobuf.h" />
     <ClInclude Include="FragmentShader.h" />
     <ClInclude Include="gNode.h" />
@@ -219,6 +223,7 @@
     <ClCompile Include="dDataBlock.cpp" />
     <ClCompile Include="dDataDictionary.cpp" />
     <ClCompile Include="dDataType.cpp" />
+    <ClCompile Include="entDebugger.cpp" />
     <ClCompile Include="filetobuf.cpp" />
     <ClCompile Include="gTreeNode.cpp" />
     <ClCompile Include="materia.cpp" />
