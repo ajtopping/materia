@@ -4,8 +4,6 @@
 
 ssRectangle::ssRectangle(float x1, float y1, float x2, float y2)
 {
-	UuidCreate(&uuid_);
-
 	set_bounds(x1, y1, x2, y2);
 }
 
