@@ -61,6 +61,12 @@
     <Filter Include="Source Files\association_model">
       <UniqueIdentifier>{d90cf9d7-9f5b-42e1-84b9-88fbf5bb8c6c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\operation">
+      <UniqueIdentifier>{1f22e1b6-8836-4c1f-b7b6-fd79b4942b06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\operation">
+      <UniqueIdentifier>{aeb853d8-257c-4c3d-9ee6-e1b831096f08}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -204,6 +210,21 @@
     <ClInclude Include="amUuid.h">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
+    <ClInclude Include="opTranslate.h">
+      <Filter>Header Files\operation</Filter>
+    </ClInclude>
+    <ClInclude Include="opSetValue.h">
+      <Filter>Header Files\operation</Filter>
+    </ClInclude>
+    <ClInclude Include="amUuid_T.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="i_S_MouseValues.h">
+      <Filter>Header Files\input</Filter>
+    </ClInclude>
+    <ClInclude Include="opCopyValue.h">
+      <Filter>Header Files\operation</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -293,6 +314,15 @@
     <ClCompile Include="entDebugger.cpp">
       <Filter>Source Files\entity</Filter>
     </ClCompile>
+    <ClCompile Include="opSetValue.cpp">
+      <Filter>Source Files\operation</Filter>
+    </ClCompile>
+    <ClCompile Include="i_S_MouseValues.cpp">
+      <Filter>Source Files\association_model</Filter>
+    </ClCompile>
+    <ClCompile Include="opCopyValue.cpp">
+      <Filter>Source Files\operation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="vertexshader.vert">
@@ -316,5 +346,10 @@
     <CopyFileToFolders Include="ndcPanel.frag">
       <Filter>Resource Files\res</Filter>
     </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="amUuid_T.cpp">
+      <Filter>Source Files\association_model</Filter>
+    </None>
   </ItemGroup>
 </Project>

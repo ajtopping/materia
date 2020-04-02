@@ -165,6 +165,7 @@
     <ClInclude Include="amUuid.h" />
     <ClInclude Include="amUuidEquator.h" />
     <ClInclude Include="amUuidHasher.h" />
+    <ClInclude Include="amUuid_T.h" />
     <ClInclude Include="am_S_Guid_entComposition.h" />
     <ClInclude Include="am_S_ssRectangle_entComposition.h" />
     <ClInclude Include="am_S_UniqueUuidAssociator.h" />
@@ -183,10 +184,14 @@
     <ClInclude Include="gTreeNode.h" />
     <ClInclude Include="illogical_polygon_parameter_error.h" />
     <ClInclude Include="i_OnClick.h" />
+    <ClInclude Include="i_S_MouseValues.h" />
     <ClInclude Include="missing_resource_error.h" />
     <ClInclude Include="mMesh.h" />
     <ClInclude Include="mMeshPrimitiveFactory.h" />
     <ClInclude Include="mTransfrom.h" />
+    <ClInclude Include="opCopyValue.h" />
+    <ClInclude Include="opSetValue.h" />
+    <ClInclude Include="opTranslate.h" />
     <ClInclude Include="PolygonGenerator.h" />
     <ClInclude Include="oRenderableMesh.h" />
     <ClInclude Include="oRenderablePointSet.h" />
@@ -226,10 +231,13 @@
     <ClCompile Include="entDebugger.cpp" />
     <ClCompile Include="filetobuf.cpp" />
     <ClCompile Include="gTreeNode.cpp" />
+    <ClCompile Include="i_S_MouseValues.cpp" />
     <ClCompile Include="materia.cpp" />
     <ClCompile Include="mMesh.cpp" />
     <ClCompile Include="mMeshPrimitiveFactory.cpp" />
     <ClCompile Include="mTransform.cpp" />
+    <ClCompile Include="opCopyValue.cpp" />
+    <ClCompile Include="opSetValue.cpp" />
     <ClCompile Include="oRenderableMesh.cpp" />
     <ClCompile Include="p2dEdgeSet.cpp" />
     <ClCompile Include="p2fPointSet.cpp" />
@@ -287,6 +295,9 @@
       <FileType>Document</FileType>
       <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)/res/shaders</DestinationFolders>
     </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="amUuid_T.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
