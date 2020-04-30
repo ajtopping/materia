@@ -162,13 +162,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="amTptr.h" />
     <ClInclude Include="amUuid.h" />
     <ClInclude Include="amUuidEquator.h" />
     <ClInclude Include="amUuidHasher.h" />
-    <ClInclude Include="amUuid_T.h" />
+    <ClInclude Include="amUuidLocator.h" />
+    <ClInclude Include="amUuid_T.tpp" />
     <ClInclude Include="am_S_Guid_entComposition.h" />
     <ClInclude Include="am_S_ssRectangle_entComposition.h" />
     <ClInclude Include="am_S_UniqueUuidAssociator.h" />
+    <ClInclude Include="am_S_Uuid_Tptr.h" />
     <ClInclude Include="Clock.h" />
     <ClInclude Include="dDataBlock.h" />
     <ClInclude Include="dDataDictionary.h" />
@@ -222,6 +225,7 @@
     <ClInclude Include="wWindow.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="amTptr.cpp" />
     <ClCompile Include="am_S_Guid_entComposition.cpp" />
     <ClCompile Include="am_S_UniqueUuidAssociator.cpp" />
     <ClCompile Include="Clock.cpp" />
@@ -295,9 +299,6 @@
       <FileType>Document</FileType>
       <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)/res/shaders</DestinationFolders>
     </CopyFileToFolders>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="amUuid_T.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,7 +1,7 @@
 #pragma once
 
 /// <summary>
-/// A singleton that uniquely maps one UUID to another UUID.
+/// A singleton for storing global mouse values.
 /// </summary>
 /// <remarks>
 /// This will become obsolete very quickly.

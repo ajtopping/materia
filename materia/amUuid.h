@@ -26,6 +26,8 @@ public:
 	}
 
 	long long get_data() const { return data_; }
+
+	bool isNil() const { return data_ == 0; }
 private:
 	long long data_;
 

@@ -216,14 +216,23 @@
     <ClInclude Include="opSetValue.h">
       <Filter>Header Files\operation</Filter>
     </ClInclude>
-    <ClInclude Include="amUuid_T.h">
-      <Filter>Header Files\association_model</Filter>
-    </ClInclude>
     <ClInclude Include="i_S_MouseValues.h">
       <Filter>Header Files\input</Filter>
     </ClInclude>
     <ClInclude Include="opCopyValue.h">
       <Filter>Header Files\operation</Filter>
+    </ClInclude>
+    <ClInclude Include="amUuidLocator.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="am_S_Uuid_Tptr.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="amUuid_T.tpp">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="amTptr.h">
+      <Filter>Header Files\association_model</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -323,6 +332,9 @@
     <ClCompile Include="opCopyValue.cpp">
       <Filter>Source Files\operation</Filter>
     </ClCompile>
+    <ClCompile Include="amTptr.cpp">
+      <Filter>Source Files\association_model</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="vertexshader.vert">
@@ -346,10 +358,5 @@
     <CopyFileToFolders Include="ndcPanel.frag">
       <Filter>Resource Files\res</Filter>
     </CopyFileToFolders>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="amUuid_T.cpp">
-      <Filter>Source Files\association_model</Filter>
-    </None>
   </ItemGroup>
 </Project>
