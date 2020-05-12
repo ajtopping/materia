@@ -13,8 +13,8 @@ template <class T>
 class amTptr
 {
 public:
-	amTptr();
-	amTptr(T * new_ptr) : ptr_(new_ptr);
+	amTptr() {};
+	amTptr(T * new_ptr) : ptr_(new_ptr) {};
 	void set_ptr(T * new_ptr) { ptr_ = new_ptr; }
 	T* get_ptr() { return ptr_; }
 private:

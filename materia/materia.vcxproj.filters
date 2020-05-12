@@ -105,9 +105,6 @@
     <ClInclude Include="dVertexSet2f.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="mTransfrom.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="oRenderableMesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -225,14 +222,35 @@
     <ClInclude Include="amUuidLocator.h">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
-    <ClInclude Include="am_S_Uuid_Tptr.h">
-      <Filter>Header Files\association_model</Filter>
-    </ClInclude>
     <ClInclude Include="amUuid_T.tpp">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
     <ClInclude Include="amTptr.h">
       <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="am_S_amTptr.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="amPtrFloat.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="amPtrPrimitive.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="amPtr.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="amPtrFactory.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="amTypeConverter.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="amTypeConversion.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="mTransform.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -333,6 +351,9 @@
       <Filter>Source Files\operation</Filter>
     </ClCompile>
     <ClCompile Include="amTptr.cpp">
+      <Filter>Source Files\association_model</Filter>
+    </ClCompile>
+    <ClCompile Include="amPtrFactory.cpp">
       <Filter>Source Files\association_model</Filter>
     </ClCompile>
   </ItemGroup>

@@ -12,6 +12,19 @@ TEST(ssRectangleSpaceTest, ReturnEmptyListWhenNoRectanglesInSpace)
 	EXPECT_TRUE(found_rectangles.empty());
 }
 
+TEST(ssRectangleSpaceTest, RectangleContainsPoint)
+{
+	ssRectangleSpace space;
+	ssRectangle rectangle0 = ssRectangle(0.0f, 0.0f, 1.0f, 1.0f);
+	ssRectangle rectangle1 = ssRectangle(1.0f, 1.0f, 2.0f, 2.0f);
+
+	bool contains = space.rectangle_contains_point(rectangle0, 0.5f, 0.5f);
+	bool not_contains = space.rectangle_contains_point(rectangle1, 0.5f, 0.5f);
+
+	EXPECT_TRUE(contains);
+	EXPECT_FALSE(not_contains);
+}
+
 TEST(ssRectangleSpaceTest, ReturnEmptyListWhenNoRectanglesContainsPoint)
 {
 	ssRectangleSpace space;

@@ -162,7 +162,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="amPtr.h" />
+    <ClInclude Include="amPtrFactory.h" />
+    <ClInclude Include="amPtrPrimitive.h" />
+    <ClInclude Include="amPtrFloat.h" />
     <ClInclude Include="amTptr.h" />
+    <ClInclude Include="amTypeConversion.h" />
+    <ClInclude Include="amTypeConverter.h" />
     <ClInclude Include="amUuid.h" />
     <ClInclude Include="amUuidEquator.h" />
     <ClInclude Include="amUuidHasher.h" />
@@ -171,7 +177,7 @@
     <ClInclude Include="am_S_Guid_entComposition.h" />
     <ClInclude Include="am_S_ssRectangle_entComposition.h" />
     <ClInclude Include="am_S_UniqueUuidAssociator.h" />
-    <ClInclude Include="am_S_Uuid_Tptr.h" />
+    <ClInclude Include="am_S_amTptr.h" />
     <ClInclude Include="Clock.h" />
     <ClInclude Include="dDataBlock.h" />
     <ClInclude Include="dDataDictionary.h" />
@@ -191,7 +197,7 @@
     <ClInclude Include="missing_resource_error.h" />
     <ClInclude Include="mMesh.h" />
     <ClInclude Include="mMeshPrimitiveFactory.h" />
-    <ClInclude Include="mTransfrom.h" />
+    <ClInclude Include="mTransform.h" />
     <ClInclude Include="opCopyValue.h" />
     <ClInclude Include="opSetValue.h" />
     <ClInclude Include="opTranslate.h" />
@@ -225,6 +231,7 @@
     <ClInclude Include="wWindow.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="amPtrFactory.cpp" />
     <ClCompile Include="amTptr.cpp" />
     <ClCompile Include="am_S_Guid_entComposition.cpp" />
     <ClCompile Include="am_S_UniqueUuidAssociator.cpp" />

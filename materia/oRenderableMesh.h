@@ -1,7 +1,7 @@
 #pragma once
 
 #include "rMesh.h"
-#include "mTransfrom.h"
+#include "mTransform.h"
 
 class oRenderableMesh
 {

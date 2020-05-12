@@ -6,7 +6,7 @@ Can be used for rendering raw GLSL
 */
 
 #include "ShaderProgram.h"
-#include "mTransfrom.h"
+#include "mTransform.h"
 #include "rProjectionMatrixFactory.h"
 
 #include "mat3x3.hpp"
