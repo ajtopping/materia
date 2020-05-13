@@ -67,6 +67,18 @@
     <Filter Include="Source Files\operation">
       <UniqueIdentifier>{aeb853d8-257c-4c3d-9ee6-e1b831096f08}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\shader">
+      <UniqueIdentifier>{ff18b1b3-5a95-4094-a04c-fd7f338b53ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\shader">
+      <UniqueIdentifier>{2d087404-329b-4778-8917-e1f8e0879d5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mesh">
+      <UniqueIdentifier>{f6f3183e-aa3e-430d-bda1-71d096f17030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\mesh">
+      <UniqueIdentifier>{f946fb64-8d5b-4dbc-8b64-afc046998497}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -76,24 +88,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="missing_resource_error.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Shader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="VertexShader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FragmentShader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ShaderProgram.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mMesh.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mMeshPrimitiveFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="wWindow.h">
@@ -249,8 +243,29 @@
     <ClInclude Include="amTypeConversion.h">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Header Files\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderProgram.h">
+      <Filter>Header Files\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexShader.h">
+      <Filter>Header Files\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="FragmentShader.h">
+      <Filter>Header Files\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="mMesh.h">
+      <Filter>Header Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mMeshPrimitiveFactory.h">
+      <Filter>Header Files\mesh</Filter>
+    </ClInclude>
     <ClInclude Include="mTransform.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderProgramFactory.h">
+      <Filter>Header Files\shader</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -263,22 +278,7 @@
     <ClCompile Include="filetobuf.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Shader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ShaderProgram.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mMesh.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mMeshPrimitiveFactory.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Clock.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mTransform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="oRenderableMesh.cpp">
@@ -355,6 +355,24 @@
     </ClCompile>
     <ClCompile Include="amPtrFactory.cpp">
       <Filter>Source Files\association_model</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Source Files\shader</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderProgram.cpp">
+      <Filter>Source Files\shader</Filter>
+    </ClCompile>
+    <ClCompile Include="mMesh.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mMeshPrimitiveFactory.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mTransform.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderProgramFactory.cpp">
+      <Filter>Source Files\shader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

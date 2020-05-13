@@ -215,6 +215,7 @@
     <ClInclude Include="rProjectionMatrixFactory.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="ShaderProgram.h" />
+    <ClInclude Include="ShaderProgramFactory.h" />
     <ClInclude Include="ssBinaryTree.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClInclude>
@@ -267,6 +268,7 @@
     <ClCompile Include="rProjectionMatrixFactory.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="ShaderProgram.cpp" />
+    <ClCompile Include="ShaderProgramFactory.cpp" />
     <ClCompile Include="ssLinkedListOrderedAccessor.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
