@@ -201,9 +201,6 @@
     <ClInclude Include="amUuid.h">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
-    <ClInclude Include="opTranslate.h">
-      <Filter>Header Files\operation</Filter>
-    </ClInclude>
     <ClInclude Include="opSetValue.h">
       <Filter>Header Files\operation</Filter>
     </ClInclude>
@@ -266,6 +263,18 @@
     </ClInclude>
     <ClInclude Include="ShaderProgramFactory.h">
       <Filter>Header Files\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="opTranslateTransformXY.h">
+      <Filter>Header Files\operation</Filter>
+    </ClInclude>
+    <ClInclude Include="opMouseTweakTransform.h">
+      <Filter>Header Files\operation</Filter>
+    </ClInclude>
+    <ClInclude Include="opOperation.h">
+      <Filter>Header Files\operation</Filter>
+    </ClInclude>
+    <ClInclude Include="opMouseDragTransform.h">
+      <Filter>Header Files\operation</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -373,6 +382,12 @@
     </ClCompile>
     <ClCompile Include="ShaderProgramFactory.cpp">
       <Filter>Source Files\shader</Filter>
+    </ClCompile>
+    <ClCompile Include="opMouseTweakTransform.cpp">
+      <Filter>Source Files\operation</Filter>
+    </ClCompile>
+    <ClCompile Include="opMouseDragTransform.cpp">
+      <Filter>Source Files\operation</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -199,8 +199,11 @@
     <ClInclude Include="mMeshPrimitiveFactory.h" />
     <ClInclude Include="mTransform.h" />
     <ClInclude Include="opCopyValue.h" />
+    <ClInclude Include="opMouseDragTransform.h" />
+    <ClInclude Include="opMouseTweakTransform.h" />
+    <ClInclude Include="opOperation.h" />
     <ClInclude Include="opSetValue.h" />
-    <ClInclude Include="opTranslate.h" />
+    <ClInclude Include="opTranslateTransformXY.h" />
     <ClInclude Include="PolygonGenerator.h" />
     <ClInclude Include="oRenderableMesh.h" />
     <ClInclude Include="oRenderablePointSet.h" />
@@ -249,6 +252,8 @@
     <ClCompile Include="mMeshPrimitiveFactory.cpp" />
     <ClCompile Include="mTransform.cpp" />
     <ClCompile Include="opCopyValue.cpp" />
+    <ClCompile Include="opMouseDragTransform.cpp" />
+    <ClCompile Include="opMouseTweakTransform.cpp" />
     <ClCompile Include="opSetValue.cpp" />
     <ClCompile Include="oRenderableMesh.cpp" />
     <ClCompile Include="p2dEdgeSet.cpp" />
