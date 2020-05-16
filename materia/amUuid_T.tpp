@@ -1,35 +1,20 @@
-#pragma once
+#include "amUuid_T.hpp"
 
-#include <unordered_map>
+/// <summary>
+/// Template declarations for all types that will be used with amUuid_T<T>
+/// </summary>
+/// <remarks>
+/// 
+/// </remarks>
 
-#include "amUuid.h"
+/*
+// opOperation
+template
+void amUuid_T<opOperation>::insert(amUuid, opOperation*);
 
-template <class T>
-class amUuid_T
-{
-public:
-	void insert(amUuid, T*);
-	T * find(amUuid);
-private:
-	std::unordered_map<amUuid, T*, amUuidHasher> dictionary_;
-};
+template
+opOperation * amUuid_T <opOperation>::find(amUuid);
 
-template <class T>
-void amUuid_T<T>::insert(amUuid uuid, T * template_class_ptr)
-{
-	this->dictionary_.insert_or_assign(uuid, template_class_ptr);
-}
-
-template <class T>
-T * amUuid_T<T>::find(amUuid uuid)
-{
-
-	if (this->dictionary_.count(uuid) == 0)
-	{
-		return nullptr;
-	}
-	else
-	{
-		return this->dictionary_.at(uuid);
-	}
-}
+template
+size_t amUuid_T <opOperation>::remove(amUuid);
+*/

@@ -9,5 +9,5 @@ void opMouseDragTransform::operate()
 	float hover_y = mousevalues_ref_.mousehover_y;
 
 	transform_ref_.posX(initial_x_ + (hover_x - down_x));
-	transform_ref_.posY(initial_y_ + (hover_y - down_y));
+	transform_ref_.posY(initial_y_ - (hover_y - down_y));  // Mouse values are relative to upper right corner as (0,0)
 }

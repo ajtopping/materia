@@ -9,5 +9,6 @@
 
 class opOperation
 {
+public:
 	virtual void operate() = 0;
 };

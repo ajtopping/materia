@@ -213,9 +213,6 @@
     <ClInclude Include="amUuidLocator.h">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
-    <ClInclude Include="amUuid_T.tpp">
-      <Filter>Header Files\association_model</Filter>
-    </ClInclude>
     <ClInclude Include="amTptr.h">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
@@ -275,6 +272,9 @@
     </ClInclude>
     <ClInclude Include="opMouseDragTransform.h">
       <Filter>Header Files\operation</Filter>
+    </ClInclude>
+    <ClInclude Include="amUuid_T.hpp">
+      <Filter>Header Files\association_model</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -412,5 +412,10 @@
     <CopyFileToFolders Include="ndcPanel.frag">
       <Filter>Resource Files\res</Filter>
     </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="amUuid_T.tpp">
+      <Filter>Source Files\association_model</Filter>
+    </None>
   </ItemGroup>
 </Project>

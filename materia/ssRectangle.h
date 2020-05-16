@@ -28,6 +28,7 @@ public:
 	float get_top() { return transform_.posY() + height_; }
 	float get_bottom() { return transform_.posY(); }
 
+	mTransform * get_transform_ptr() { return &transform_; }
 	amUuid get_uuid() { return uuid_; }
 private:
 	float width_ = 1.0f;
