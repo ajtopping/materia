@@ -28,3 +28,8 @@ amUuid am_S_UniqueUuidAssociator::find(amUuid uuid)
 		return this->dictionary_.at(uuid);
 	}
 }
+
+size_t am_S_UniqueUuidAssociator::remove(amUuid uuid)
+{
+	return this->dictionary_.erase(uuid);
+}

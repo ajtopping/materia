@@ -27,5 +27,5 @@ std::forward_list<ssRectangle> ssRectangleSpace::find_rectangles_containing_poin
 
 bool ssRectangleSpace::rectangle_contains_point(ssRectangle rectangle, float x, float y)
 {
-	return rectangle.get_left() < x && rectangle.get_right() > x && rectangle.get_bottom() < y && rectangle.get_top() > y;
+	return rectangle.get_world_left() < x && rectangle.get_world_right() > x && rectangle.get_world_bottom() < y && rectangle.get_world_top() > y;
 }

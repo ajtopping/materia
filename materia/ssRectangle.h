@@ -10,6 +10,8 @@
 
 #include "amUuid.h"
 #include "mTransform.h"
+#include "am_S_UniqueUuidAssociator.h"
+#include "am_S_Uuid_T.tpp"
 
 class ssRectangle
 {
@@ -23,14 +25,21 @@ public:
 	void set_dimensions(float, float);
 	void set_position(float, float);
 
-	float get_left() { return transform_.posX(); }
-	float get_right() { return transform_.posX() + width_; }
-	float get_top() { return transform_.posY() + height_; }
-	float get_bottom() { return transform_.posY(); }
+	float get_world_left();
+	float get_world_right();
+	float get_world_top();
+	float get_world_bottom();
+
+	float get_relative_left() { return transform_.posX(); }
+	float get_relative_right() { return transform_.posX() + width_; }
+	float get_relative_top() { return transform_.posY() + height_; }
+	float get_relative_bottom() { return transform_.posY(); }
 
 	mTransform * get_transform_ptr() { return &transform_; }
 	amUuid get_uuid() { return uuid_; }
 private:
+	mTransform get_parent_transform();
+
 	float width_ = 1.0f;
 	float height_ = 1.0f;
 

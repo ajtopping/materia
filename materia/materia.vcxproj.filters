@@ -276,6 +276,9 @@
     <ClInclude Include="amUuid_T.hpp">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
+    <ClInclude Include="am_S_Uuid_T.hpp">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -415,6 +418,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="amUuid_T.tpp">
+      <Filter>Source Files\association_model</Filter>
+    </None>
+    <None Include="am_S_Uuid_T.tpp">
       <Filter>Source Files\association_model</Filter>
     </None>
   </ItemGroup>

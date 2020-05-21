@@ -178,6 +178,7 @@
     <ClInclude Include="am_S_ssRectangle_entComposition.h" />
     <ClInclude Include="am_S_UniqueUuidAssociator.h" />
     <ClInclude Include="am_S_amTptr.h" />
+    <ClInclude Include="am_S_Uuid_T.hpp" />
     <ClInclude Include="Clock.h" />
     <ClInclude Include="dDataBlock.h" />
     <ClInclude Include="dDataDictionary.h" />
@@ -316,6 +317,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="amUuid_T.tpp" />
+    <None Include="am_S_Uuid_T.tpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

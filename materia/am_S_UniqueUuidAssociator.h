@@ -19,6 +19,7 @@ public:
 	static am_S_UniqueUuidAssociator * get_instance();
 	void insert(amUuid, amUuid);
 	amUuid find(amUuid);
+	size_t remove(amUuid);
 private:
 	am_S_UniqueUuidAssociator() {};
 
