@@ -11,4 +11,5 @@ class opOperation
 {
 public:
 	virtual void operate() = 0;
+	virtual void reinitialize() {};
 };

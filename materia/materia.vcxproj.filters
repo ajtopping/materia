@@ -79,6 +79,12 @@
     <Filter Include="Header Files\mesh">
       <UniqueIdentifier>{f946fb64-8d5b-4dbc-8b64-afc046998497}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\utility">
+      <UniqueIdentifier>{12042c35-8680-4365-8185-3456968fb9d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utility">
+      <UniqueIdentifier>{c05b116e-fe63-4744-8b99-6dbfb6b3f07c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -279,6 +285,9 @@
     <ClInclude Include="am_S_Uuid_T.hpp">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
+    <ClInclude Include="CoordinateSystem.h">
+      <Filter>Header Files\utility</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -391,6 +400,9 @@
     </ClCompile>
     <ClCompile Include="opMouseDragTransform.cpp">
       <Filter>Source Files\operation</Filter>
+    </ClCompile>
+    <ClCompile Include="CoordinateSystem.cpp">
+      <Filter>Source Files\utility</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

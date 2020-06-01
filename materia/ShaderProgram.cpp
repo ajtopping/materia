@@ -73,7 +73,7 @@ void ShaderProgram::detachAttachedShaders()
 {
 	for (std::vector<GLuint>::iterator iter = _attachedShaders.begin(); iter != _attachedShaders.end(); ++iter)
 	{
-		fprintf(stdout, "Detaching shader: %d\n", *iter);
+		fprintf(stdout, "ShaderProgram: Detaching shader: %d\n", *iter);
 		detachShader(*iter);
 	}
 }

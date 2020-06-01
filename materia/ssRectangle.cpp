@@ -79,6 +79,7 @@ mTransform ssRectangle::get_parent_transform()
 
 	if (parent_uuid.isNil())
 	{
+		fprintf(stdout, "parent_uuid is nil!\n");
 		return mTransform();
 	}
 
@@ -86,8 +87,10 @@ mTransform ssRectangle::get_parent_transform()
 
 	if (parent_transform_ptr == nullptr)
 	{
+		fprintf(stdout, "Parent transform is null!\n");
 		return mTransform();
 	}
 
+	fprintf(stdout, "Found a parent transform!\n");
 	return mTransform((*parent_transform_ptr));
 }

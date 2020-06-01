@@ -180,6 +180,7 @@
     <ClInclude Include="am_S_amTptr.h" />
     <ClInclude Include="am_S_Uuid_T.hpp" />
     <ClInclude Include="Clock.h" />
+    <ClInclude Include="CoordinateSystem.h" />
     <ClInclude Include="dDataBlock.h" />
     <ClInclude Include="dDataDictionary.h" />
     <ClInclude Include="dDataLayout.h" />
@@ -241,6 +242,7 @@
     <ClCompile Include="am_S_Guid_entComposition.cpp" />
     <ClCompile Include="am_S_UniqueUuidAssociator.cpp" />
     <ClCompile Include="Clock.cpp" />
+    <ClCompile Include="CoordinateSystem.cpp" />
     <ClCompile Include="dDataBlock.cpp" />
     <ClCompile Include="dDataDictionary.cpp" />
     <ClCompile Include="dDataType.cpp" />
