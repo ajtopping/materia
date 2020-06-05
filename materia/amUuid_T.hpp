@@ -1,5 +1,12 @@
 #pragma once
 
+/// <summary>
+/// A map that associates a unique amUuid [key] to a template type T [value]
+/// </summary>
+/// <remarks>
+/// 
+/// </remarks>
+
 #include <unordered_map>
 
 #include "amUuid.h"

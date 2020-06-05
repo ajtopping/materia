@@ -194,6 +194,7 @@
     <ClInclude Include="gNode.h" />
     <ClInclude Include="gTreeNode.h" />
     <ClInclude Include="illogical_polygon_parameter_error.h" />
+    <ClInclude Include="iMouseDragOperationsHandler.h" />
     <ClInclude Include="i_OnClick.h" />
     <ClInclude Include="i_S_MouseValues.h" />
     <ClInclude Include="missing_resource_error.h" />
@@ -249,6 +250,7 @@
     <ClCompile Include="entDebugger.cpp" />
     <ClCompile Include="filetobuf.cpp" />
     <ClCompile Include="gTreeNode.cpp" />
+    <ClCompile Include="iMouseDragOperationsHandler.cpp" />
     <ClCompile Include="i_S_MouseValues.cpp" />
     <ClCompile Include="materia.cpp" />
     <ClCompile Include="mMesh.cpp" />
