@@ -187,10 +187,12 @@
     <ClInclude Include="dDataSpec.h" />
     <ClInclude Include="dDataType.h" />
     <ClInclude Include="dVertexSet2f.h" />
-    <ClInclude Include="entComposition.h" />
+    <ClInclude Include="entComposition.hpp" />
     <ClInclude Include="entDebugger.h" />
+    <ClInclude Include="entScene.hpp" />
     <ClInclude Include="filetobuf.h" />
     <ClInclude Include="FragmentShader.h" />
+    <ClInclude Include="GetComponent.hpp" />
     <ClInclude Include="gNode.h" />
     <ClInclude Include="gTreeNode.h" />
     <ClInclude Include="illogical_polygon_parameter_error.h" />

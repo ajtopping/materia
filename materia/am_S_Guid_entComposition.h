@@ -12,7 +12,7 @@
 
 #include "amUuid.h"
 
-#include "entComposition.h"
+#include "entComposition.hpp"
 
 class am_S_Guid_entComposition
 {

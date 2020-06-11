@@ -1,7 +1,7 @@
 #pragma once
 
 #include <ostream>
-#include "entComposition.h"
+#include "entComposition.hpp"
 
 class entDebugger
 {
