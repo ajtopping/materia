@@ -27,9 +27,9 @@ public:
 	amUuid()
 	{
 		auto now = std::chrono::high_resolution_clock::now();
-		auto microseconds = std::chrono::duration_cast<std::chrono::microseconds>(now.time_since_epoch());
+		auto nanoseconds = std::chrono::duration_cast<std::chrono::nanoseconds>(now.time_since_epoch());
 
-		data_ = microseconds.count();
+		data_ = nanoseconds.count();
 	}
 
 	amUuid(long long uuid)

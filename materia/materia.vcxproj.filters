@@ -291,14 +291,17 @@
     <ClInclude Include="iMouseDragOperationsHandler.h">
       <Filter>Header Files\input</Filter>
     </ClInclude>
-    <ClInclude Include="GetComponent.hpp">
-      <Filter>Header Files\utility</Filter>
-    </ClInclude>
     <ClInclude Include="entScene.hpp">
       <Filter>Header Files\entity</Filter>
     </ClInclude>
     <ClInclude Include="entComposition.hpp">
       <Filter>Header Files\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="entDraw.h">
+      <Filter>Header Files\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.hpp">
+      <Filter>Header Files\utility</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -418,6 +421,9 @@
     </ClCompile>
     <ClCompile Include="iMouseDragOperationsHandler.cpp">
       <Filter>Source Files\input</Filter>
+    </ClCompile>
+    <ClCompile Include="entDraw.cpp">
+      <Filter>Source Files\entity</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

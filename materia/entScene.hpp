@@ -20,27 +20,27 @@ public:
 	std::unordered_set<amUuid, amUuidHasher> getEntityUuidSet();
 	
 private:
-	std::unordered_set<amUuid,amUuidHasher> setAmUuid;
+	std::unordered_set<amUuid,amUuidHasher> setAmUuid_;
 };
 
 void entScene::addCompositionEntity(entComposition composition)
 {
-	setAmUuid.insert(composition.get_uuid());
+	setAmUuid_.insert(composition.get_uuid());
 }
 
 amUuid entScene::findEntityUuid(entComposition composition)
 {
-	if (setAmUuid.count(composition.get_uuid()) == 0)
+	if (setAmUuid_.count(composition.get_uuid()) == 0)
 	{
 		return amUuid(0);
 	}
 
-	auto iter = setAmUuid.find(composition.get_uuid());
+	auto iter = setAmUuid_.find(composition.get_uuid());
 
 	return *iter;
 }
 
 std::unordered_set<amUuid, amUuidHasher> entScene::getEntityUuidSet()
 {
-	return setAmUuid;
+	return setAmUuid_;
 }

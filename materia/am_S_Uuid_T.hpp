@@ -20,6 +20,7 @@ public:
 	static am_S_Uuid_T * get_instance();
 	static void insert(amUuid, T);
 	static T find(amUuid);
+	static bool has(amUuid);
 	static size_t remove(amUuid);
 private:
 	am_S_Uuid_T() {};
@@ -60,6 +61,18 @@ T am_S_Uuid_T<T>::find(amUuid uuid)
 	{
 		return am_S_Uuid_T<T>::get_instance()->dictionary_.at(uuid);
 	}
+}
+
+template <class T>
+bool am_S_Uuid_T<T>::has(amUuid uuid)
+{
+
+	if (am_S_Uuid_T<T>::get_instance()->dictionary_.count(uuid) == 0)
+	{
+		return false;
+	}
+	
+	return true;
 }
 
 template <class T>

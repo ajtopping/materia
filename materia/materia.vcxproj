@@ -189,10 +189,11 @@
     <ClInclude Include="dVertexSet2f.h" />
     <ClInclude Include="entComposition.hpp" />
     <ClInclude Include="entDebugger.h" />
+    <ClInclude Include="entDraw.h" />
     <ClInclude Include="entScene.hpp" />
     <ClInclude Include="filetobuf.h" />
     <ClInclude Include="FragmentShader.h" />
-    <ClInclude Include="GetComponent.hpp" />
+    <ClInclude Include="Component.hpp" />
     <ClInclude Include="gNode.h" />
     <ClInclude Include="gTreeNode.h" />
     <ClInclude Include="illogical_polygon_parameter_error.h" />
@@ -250,6 +251,7 @@
     <ClCompile Include="dDataDictionary.cpp" />
     <ClCompile Include="dDataType.cpp" />
     <ClCompile Include="entDebugger.cpp" />
+    <ClCompile Include="entDraw.cpp" />
     <ClCompile Include="filetobuf.cpp" />
     <ClCompile Include="gTreeNode.cpp" />
     <ClCompile Include="iMouseDragOperationsHandler.cpp" />

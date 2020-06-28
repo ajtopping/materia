@@ -62,7 +62,7 @@ void rMesh::Draw(glm::mat4 mvp)
 		glUniform2i(u_resolution_loc, u_resolution_x_, u_resolution_y_);
 
 		//glDrawArrays(GL_POINTS, 0, vertex_count_);
-		glDrawElements(GL_LINES, triangle_count_ * 3, GL_UNSIGNED_INT, (void*)0);
+		glDrawElements(GL_TRIANGLES, triangle_count_ * 3, GL_UNSIGNED_INT, (void*)0);
 		//fprintf(stdout, "vertex_count_ = %d\ntriangle_count_ = %d\n", vertex_count_, triangle_count_);
 
 		glBindVertexArray(0);
