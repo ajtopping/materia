@@ -303,6 +303,15 @@
     <ClInclude Include="Component.hpp">
       <Filter>Header Files\utility</Filter>
     </ClInclude>
+    <ClInclude Include="shUniformT.h">
+      <Filter>Header Files\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="shGlobalUniformMap.h">
+      <Filter>Header Files\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="shUniformBase.h">
+      <Filter>Header Files\shader</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -425,6 +434,9 @@
     <ClCompile Include="entDraw.cpp">
       <Filter>Source Files\entity</Filter>
     </ClCompile>
+    <ClCompile Include="shGlobalUniformMap.cpp">
+      <Filter>Source Files\shader</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="vertexshader.vert">
@@ -455,6 +467,9 @@
     </None>
     <None Include="am_S_Uuid_T.tpp">
       <Filter>Source Files\association_model</Filter>
+    </None>
+    <None Include="shUniformT.tpp">
+      <Filter>Source Files\shader</Filter>
     </None>
   </ItemGroup>
 </Project>

@@ -225,6 +225,9 @@
     <ClInclude Include="Shader.h" />
     <ClInclude Include="ShaderProgram.h" />
     <ClInclude Include="ShaderProgramFactory.h" />
+    <ClInclude Include="shGlobalUniformMap.h" />
+    <ClInclude Include="shUniformBase.h" />
+    <ClInclude Include="shUniformT.h" />
     <ClInclude Include="ssBinaryTree.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClInclude>
@@ -283,6 +286,7 @@
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="ShaderProgram.cpp" />
     <ClCompile Include="ShaderProgramFactory.cpp" />
+    <ClCompile Include="shGlobalUniformMap.cpp" />
     <ClCompile Include="ssLinkedListOrderedAccessor.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -326,6 +330,7 @@
   <ItemGroup>
     <None Include="amUuid_T.tpp" />
     <None Include="am_S_Uuid_T.tpp" />
+    <None Include="shUniformT.tpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
