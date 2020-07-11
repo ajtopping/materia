@@ -5,7 +5,7 @@
 #include <vector>
 #include <utility>
 
-#include "GL\glew.h"
+#include <GL/glew.h>
 #include "SDL_opengl.h"
 
 #include "shUniformT.h"
@@ -21,6 +21,6 @@ public:
 	template <class T>
 	bool update_uniform(std::string, T);
 private:
-	std::unordered_map<std::string, shUniformBase> uniform_map_;
+	std::unordered_map<std::string, shUniformBase*> uniform_map_;
 	std::unordered_map<GLuint, std::vector<std::pair<GLint, std::string>>> address_map_;
 };

@@ -14,6 +14,8 @@ typedef std::pair<GLuint, GLint> UniformAddress;
 class shUniformBase
 {
 public:
+	shUniformBase(std::string name) : uniform_name(name) {};
+
 	std::string uniform_name;
 
 	virtual bool use_program_and_send_data(UniformAddress) = 0;

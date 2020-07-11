@@ -14,6 +14,8 @@ template <class T>
 class shUniformT : public shUniformBase
 {
 public:
+	shUniformT(std::string name) : shUniformBase( name ) {};
+
 	std::string uniform_name;
 	T data;
 

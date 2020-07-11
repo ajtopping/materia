@@ -33,12 +33,14 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>D:\Dev\glm;$(IncludePath)</IncludePath>
+    <IncludePath>D:\Dev\glew-2.1.0\include;D:\Dev\SDL2-2.0.9\include;D:\Dev\glm;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Dev\glew-2.1.0\lib\Release\Win32;D:\Dev\SDL2-2.0.9\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClCompile Include="amUuidTest.cpp" />
     <ClCompile Include="entSceneTest.cpp" />
+    <ClCompile Include="shGlobalUniformMapTest.cpp" />
     <ClCompile Include="ssRectangleTest.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -75,10 +77,12 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>D:\Dev\glew-2.1.0\include;D:\Dev\SDL2-2.0.9\include;D:\Dev\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>SDL2.lib;glew32.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

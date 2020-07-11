@@ -10,18 +10,23 @@ void shGlobalUniformMap::send_data_to_uniforms()
 	for (auto iter = address_map_.begin(); iter != address_map_.end(); iter++)
 	{
 		sp_id = iter->first;
-		sp_uniform_index = iter->second.first;
-		uniform_name = iter->second.second;
 
-		if (uniform_map_.count(uniform_name) == 0)
+		for (auto vec_iter = iter->second.begin(); vec_iter != iter->second.end(); vec_iter++)
 		{
-			fprintf(stdout, "Cannot send uniform data: the uniform name %s was not found in the GlobalUniformMap.\n", uniform_name);
+			sp_uniform_index = vec_iter->first;
+			uniform_name = vec_iter->second;
+
+			if (uniform_map_.count(uniform_name) == 0)
+			{
+				fprintf(stdout, "Cannot send uniform data: the uniform name %s was not found in the GlobalUniformMap.\n", uniform_name.c_str());
+			}
+			else
+			{
+				uniform = uniform_map_.at(uniform_name);
+				uniform->send_data(UniformAddress(sp_id, sp_uniform_index));
+			}
 		}
-		else
-		{
-			uniform = &uniform_map_.at(uniform_name);
-			uniform->send_data(UniformAddress(sp_id, sp_uniform_index));
-		}
+		
 	}
 }
 
@@ -31,7 +36,7 @@ bool shGlobalUniformMap::add_uniform_to_shaderprogram(GLuint shaderprogram_uuid,
 
 	if (uniform_loc < 0)
 	{
-		fprintf(stdout, "Cannot add uniform to shaderprogram: the uniform name %s was not found in shaderprogram with id %d\n", uniform_name, shaderprogram_uuid);
+		fprintf(stdout, "Cannot add uniform to shaderprogram: the uniform name %s was not found in shaderprogram with id %d\n", uniform_name.c_str(), shaderprogram_uuid);
 		return false;
 	}
 
@@ -42,19 +47,26 @@ bool shGlobalUniformMap::add_uniform_to_shaderprogram(GLuint shaderprogram_uuid,
 
 	auto vec = address_map_.at(shaderprogram_uuid);
 	vec.emplace_back(std::pair<GLint, std::string>(uniform_loc, uniform_name));
+
+	return true;
+}
+
+bool shGlobalUniformMap::add_uniform(shUniformBase * uniform_ptr)
+{
+	return uniform_map_.emplace(uniform_ptr->uniform_name, uniform_ptr).second;
 }
 
 template <class T>
-bool shGlobalUniformMap::update_uniform<T>(std::string uniform_name, T uniform_data)
+bool shGlobalUniformMap::update_uniform(std::string uniform_name, T uniform_data)
 {
 	if (uniform_map_.count(uniform_name) == 0)
 	{
-		fprintf(stdout, "Cannot update uniform data: the uniform name %s was not found in the GlobalUniformMap.\n", uniform_name);
+		fprintf(stdout, "Cannot update uniform data: the uniform name %s was not found in the GlobalUniformMap.\n", uniform_name.c_str());
 		return false;
 	}
 
-	shUniformT<T> uniform = uniform_map_.at(uniform_name);
-	uniform.data = uniform_data;
+	shUniformT<T> * uniform = dynamic_cast<shUniformT<T>*>(uniform_map_.at(uniform_name));
+	uniform->data = uniform_data;
 
 	return true;
 }
