@@ -56,17 +56,3 @@ bool shGlobalUniformMap::add_uniform(shUniformBase * uniform_ptr)
 	return uniform_map_.emplace(uniform_ptr->uniform_name, uniform_ptr).second;
 }
 
-template <class T>
-bool shGlobalUniformMap::update_uniform(std::string uniform_name, T uniform_data)
-{
-	if (uniform_map_.count(uniform_name) == 0)
-	{
-		fprintf(stdout, "Cannot update uniform data: the uniform name %s was not found in the GlobalUniformMap.\n", uniform_name.c_str());
-		return false;
-	}
-
-	shUniformT<T> * uniform = dynamic_cast<shUniformT<T>*>(uniform_map_.at(uniform_name));
-	uniform->data = uniform_data;
-
-	return true;
-}
