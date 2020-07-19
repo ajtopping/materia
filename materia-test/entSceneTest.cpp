@@ -1,7 +1,7 @@
 #include "pch.h"
 
 #include "../materia/entComposition.hpp"
-#include "../materia/entScene.hpp"
+#include "../materia/entScene.cpp"
 
 TEST(entSceneTest, EmptySceneReturnsEmptySet)
 {

@@ -180,6 +180,7 @@
     <ClInclude Include="am_S_amTptr.h" />
     <ClInclude Include="am_S_Uuid_T.hpp" />
     <ClInclude Include="Clock.h" />
+    <ClInclude Include="compManager.h" />
     <ClInclude Include="CoordinateSystem.h" />
     <ClInclude Include="dDataBlock.h" />
     <ClInclude Include="dDataDictionary.h" />
@@ -190,7 +191,7 @@
     <ClInclude Include="entComposition.hpp" />
     <ClInclude Include="entDebugger.h" />
     <ClInclude Include="entDraw.h" />
-    <ClInclude Include="entScene.hpp" />
+    <ClInclude Include="entScene.h" />
     <ClInclude Include="filetobuf.h" />
     <ClInclude Include="FragmentShader.h" />
     <ClInclude Include="Component.hpp" />
@@ -255,6 +256,7 @@
     <ClCompile Include="dDataType.cpp" />
     <ClCompile Include="entDebugger.cpp" />
     <ClCompile Include="entDraw.cpp" />
+    <ClCompile Include="entScene.cpp" />
     <ClCompile Include="filetobuf.cpp" />
     <ClCompile Include="gTreeNode.cpp" />
     <ClCompile Include="iMouseDragOperationsHandler.cpp" />

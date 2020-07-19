@@ -88,6 +88,9 @@
     <Filter Include="Source Files\input">
       <UniqueIdentifier>{e6a9f25f-172d-41f6-9ac1-dee5a271fe5c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\component">
+      <UniqueIdentifier>{da3284e2-5f9f-46a9-821f-64c5fb9aa868}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -291,9 +294,6 @@
     <ClInclude Include="iMouseDragOperationsHandler.h">
       <Filter>Header Files\input</Filter>
     </ClInclude>
-    <ClInclude Include="entScene.hpp">
-      <Filter>Header Files\entity</Filter>
-    </ClInclude>
     <ClInclude Include="entComposition.hpp">
       <Filter>Header Files\entity</Filter>
     </ClInclude>
@@ -311,6 +311,12 @@
     </ClInclude>
     <ClInclude Include="shUniformBase.h">
       <Filter>Header Files\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="entScene.h">
+      <Filter>Header Files\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="compManager.h">
+      <Filter>Header Files\component</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -436,6 +442,9 @@
     </ClCompile>
     <ClCompile Include="shGlobalUniformMap.cpp">
       <Filter>Source Files\shader</Filter>
+    </ClCompile>
+    <ClCompile Include="entScene.cpp">
+      <Filter>Source Files\entity</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

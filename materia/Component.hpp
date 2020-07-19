@@ -15,4 +15,19 @@ namespace util
 	{
 		return am_S_Uuid_T<T>::has(composition_uuid);
 	}
+
+	template <class T>
+	void AttachComponent(amUuid composition_uuid, T t_val)
+	{
+		return am_S_Uuid_T<T>::insert(composition_uuid, t_val);
+	}
+
+	/*
+	template <class T>
+	T NewComponent(amUuid composition_uuid)
+	{
+		broken
+		return am_S_Uuid_T<T>::insert(composition_uuid, t_val);
+	}
+	*/
 }

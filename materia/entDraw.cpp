@@ -24,3 +24,30 @@ void entDraw::Draw(amUuid entity_uuid)
 
 	
 }
+
+void entDraw::DrawScene(amUuid scene_uuid)
+{
+	if ( !am_S_Uuid_T<entScene *>::has(scene_uuid) )
+	{
+		fprintf(stdout, "entDraw::DrawScene: No entScene with uuid %llu exists.\n", scene_uuid.get_data());
+	}
+
+	entScene * scene = am_S_Uuid_T<entScene *>::find(scene_uuid);
+
+	auto scene_set = scene->getEntityUuidSet();
+
+	for (auto iter = scene_set.begin(); iter != scene_set.end(); iter++)
+	{
+		entDraw::Draw(*iter);
+	}
+}
+
+void entDraw::DrawScene(entScene & scene_ref)
+{
+	auto scene_set = scene_ref.getEntityUuidSet();
+
+	for (auto iter = scene_set.begin(); iter != scene_set.end(); iter++)
+	{
+		entDraw::Draw(*iter);
+	}
+}
