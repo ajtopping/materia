@@ -250,6 +250,7 @@
     <ClCompile Include="am_S_Guid_entComposition.cpp" />
     <ClCompile Include="am_S_UniqueUuidAssociator.cpp" />
     <ClCompile Include="Clock.cpp" />
+    <ClCompile Include="compManager.cpp" />
     <ClCompile Include="CoordinateSystem.cpp" />
     <ClCompile Include="dDataBlock.cpp" />
     <ClCompile Include="dDataDictionary.cpp" />

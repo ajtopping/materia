@@ -91,6 +91,9 @@
     <Filter Include="Header Files\component">
       <UniqueIdentifier>{da3284e2-5f9f-46a9-821f-64c5fb9aa868}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\component">
+      <UniqueIdentifier>{c61f5874-7152-4c6f-a07a-d7bc122fef7d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -445,6 +448,9 @@
     </ClCompile>
     <ClCompile Include="entScene.cpp">
       <Filter>Source Files\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="compManager.cpp">
+      <Filter>Source Files\component</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
