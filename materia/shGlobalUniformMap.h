@@ -22,6 +22,8 @@ public:
 	bool update_uniform(std::string, T);
 private:
 	std::unordered_map<std::string, shUniformBase*> uniform_map_;
+
+	// Maps a shaderprogram uuid to a list of uniform location/name pairs
 	std::unordered_map<GLuint, std::vector<std::pair<GLint, std::string>>> address_map_;
 };
 

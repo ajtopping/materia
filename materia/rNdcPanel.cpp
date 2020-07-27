@@ -43,13 +43,13 @@ void rNdcPanel::Draw(glm::mat4 mvp)
 		//fprintf(stdout, "Uniform loc = %d\n", u_mvp_loc);
 		glUniformMatrix4fv(u_mvp_loc, 1, GL_FALSE, &mvp[0][0]);
 
-		GLint u_runtime_in_seconds_loc = glGetUniformLocation(shaderprogram_->getShaderProgramUUID(), "u_runtime_in_seconds");
+		//GLint u_runtime_in_seconds_loc = glGetUniformLocation(shaderprogram_->getShaderProgramUUID(), "u_runtime_in_seconds");
 		//fprintf(stdout, "u_runtime_seconds_loc = %d\n", u_runtime_in_seconds_loc);
-		glUniform1f(u_runtime_in_seconds_loc, this->u_runtime_seconds_);
+		//glUniform1f(u_runtime_in_seconds_loc, this->u_runtime_seconds_);
 
-		GLint u_resolution_loc = glGetUniformLocation(shaderprogram_->getShaderProgramUUID(), "u_resolution");
+		//GLint u_resolution_loc = glGetUniformLocation(shaderprogram_->getShaderProgramUUID(), "u_resolution");
 		//fprintf(stdout, "u_resolution_loc = %d\n", u_resolution_loc);
-		glUniform2i(u_resolution_loc, u_resolution_x_, u_resolution_y_);
+		//glUniform2i(u_resolution_loc, u_resolution_x_, u_resolution_y_);
 
 
 		//glDrawArrays(GL_POINTS, 0, vertex_count_);

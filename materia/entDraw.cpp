@@ -4,7 +4,7 @@ void entDraw::Draw(amUuid entity_uuid)
 {
 	if (!util::HasComponent<Renderer *>(entity_uuid))
 	{
-		fprintf(stdout, "Entity has no Renderer. Skipping...");
+		fprintf(stdout, "Entity has no Renderer. Skipping...\n");
 	}
 
 	Renderer * renderer_ptr = util::GetComponent<Renderer *>(entity_uuid);
@@ -18,7 +18,7 @@ void entDraw::Draw(amUuid entity_uuid)
 	}
 	else
 	{
-		fprintf(stdout, "Entity has no mTransform. Using default...");
+		fprintf(stdout, "Entity has no mTransform. Using default...\n");
 		renderer_ptr->Draw();
 	}
 
