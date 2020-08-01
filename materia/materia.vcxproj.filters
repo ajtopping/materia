@@ -94,6 +94,15 @@
     <Filter Include="Source Files\component">
       <UniqueIdentifier>{c61f5874-7152-4c6f-a07a-d7bc122fef7d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui">
+      <UniqueIdentifier>{54e6f029-25cd-4a2d-91f4-29172d360a8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\texture">
+      <UniqueIdentifier>{678b027d-6d92-451b-900d-4f3981c5b5ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\texture">
+      <UniqueIdentifier>{1af7b4fe-850d-448f-8aab-eb87b2e3f365}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -321,6 +330,18 @@
     <ClInclude Include="compManager.h">
       <Filter>Header Files\component</Filter>
     </ClInclude>
+    <ClInclude Include="guiPanel.h">
+      <Filter>Header Files\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="texRenderTarget.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="rCamera.h">
+      <Filter>Header Files\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="rRenderLayer.h">
+      <Filter>Header Files\renderer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -451,6 +472,12 @@
     </ClCompile>
     <ClCompile Include="compManager.cpp">
       <Filter>Source Files\component</Filter>
+    </ClCompile>
+    <ClCompile Include="texRenderTarget.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="rRenderLayer.cpp">
+      <Filter>Source Files\renderer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

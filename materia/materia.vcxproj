@@ -197,6 +197,7 @@
     <ClInclude Include="Component.hpp" />
     <ClInclude Include="gNode.h" />
     <ClInclude Include="gTreeNode.h" />
+    <ClInclude Include="guiPanel.h" />
     <ClInclude Include="illogical_polygon_parameter_error.h" />
     <ClInclude Include="iMouseDragOperationsHandler.h" />
     <ClInclude Include="i_OnClick.h" />
@@ -218,11 +219,13 @@
     <ClInclude Include="p2fPointSet.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="RandomGenerator.h" />
+    <ClInclude Include="rCamera.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="rMesh.h" />
     <ClInclude Include="rNdcPanel.h" />
     <ClInclude Include="rPoints.h" />
     <ClInclude Include="rProjectionMatrixFactory.h" />
+    <ClInclude Include="rRenderLayer.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="ShaderProgram.h" />
     <ClInclude Include="ShaderProgramFactory.h" />
@@ -241,6 +244,7 @@
     </ClInclude>
     <ClInclude Include="ssRectangle.h" />
     <ClInclude Include="ssRectangleSpace.h" />
+    <ClInclude Include="texRenderTarget.h" />
     <ClInclude Include="VertexShader.h" />
     <ClInclude Include="wWindow.h" />
   </ItemGroup>
@@ -286,6 +290,7 @@
     <ClCompile Include="rNdcPanel.cpp" />
     <ClCompile Include="rPoints.cpp" />
     <ClCompile Include="rProjectionMatrixFactory.cpp" />
+    <ClCompile Include="rRenderLayer.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="ShaderProgram.cpp" />
     <ClCompile Include="ShaderProgramFactory.cpp" />
@@ -295,6 +300,7 @@
     </ClCompile>
     <ClCompile Include="ssRectangle.cpp" />
     <ClCompile Include="ssRectangleSpace.cpp" />
+    <ClCompile Include="texRenderTarget.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="dots.frag">
