@@ -11,15 +11,17 @@ void entDraw::Draw(amUuid entity_uuid)
 
 	mTransform * transform_ptr;
 
+	glm::mat4 camera_matrix = util::camera::GetActiveCameraViewMatrix();
+
 	if (util::HasComponent<mTransform *>(entity_uuid))
 	{
 		transform_ptr = util::GetComponent<mTransform *>(entity_uuid);
-		renderer_ptr->Draw(transform_ptr->get_composition_matrix());
+		renderer_ptr->Draw(transform_ptr->get_composition_matrix() * camera_matrix);
 	}
 	else
 	{
 		fprintf(stdout, "Entity has no mTransform. Using default...\n");
-		renderer_ptr->Draw();
+		renderer_ptr->Draw(camera_matrix);
 	}
 
 	

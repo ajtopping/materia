@@ -45,6 +45,9 @@ public:
 
 	glm::mat4 get_composition_matrix();
 
+	glm::vec3 get_pos() { return pos_; }
+	glm::vec4 get_rot() { return rot_; }
+	glm::vec3 get_scale() { return scale_; }
 private:
 	glm::vec3 pos_ = glm::vec3(0.0f);
 	glm::vec4 rot_ = glm::vec4(0.0f);

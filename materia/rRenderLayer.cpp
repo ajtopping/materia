@@ -3,10 +3,9 @@
 
 void rRenderLayer::Render()
 {
-	GLuint framebuffer_id = framebuffer_ < 0 ? 0 : framebuffer_;
-	glBindFramebuffer(GL_FRAMEBUFFER, framebuffer_id);
+	glBindFramebuffer(GL_FRAMEBUFFER, framebuffer_);
 
-	// Rethink camera and projection stuff
+	util::camera::SetActiveCamera(camera_uuid_);
 
 	entDraw::DrawScene( scene_uuid_ );
 }

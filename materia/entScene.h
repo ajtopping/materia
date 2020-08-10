@@ -19,6 +19,9 @@ public:
 	amUuid findEntityUuid(entComposition);
 	std::unordered_set<amUuid, amUuidHasher> getEntityUuidSet();
 	
+	amUuid get_uuid() { return uuid_; }
 private:
 	std::unordered_set<amUuid,amUuidHasher> setAmUuid_;
+
+	amUuid uuid_ = amUuid();
 };

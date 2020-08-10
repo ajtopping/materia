@@ -11,6 +11,7 @@
 
 #include "amUuid.h"
 #include "entDraw.h"
+#include "Camera.h"
 
 class rRenderLayer
 {
@@ -23,6 +24,6 @@ public:
 private:
 	amUuid scene_uuid_ = amUuid(0);
 	amUuid camera_uuid_ = amUuid(0);
-	GLuint framebuffer_ = -1;
+	GLuint framebuffer_ = 0;
 
 };

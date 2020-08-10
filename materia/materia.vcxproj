@@ -179,6 +179,7 @@
     <ClInclude Include="am_S_UniqueUuidAssociator.h" />
     <ClInclude Include="am_S_amTptr.h" />
     <ClInclude Include="am_S_Uuid_T.hpp" />
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="Clock.h" />
     <ClInclude Include="compManager.h" />
     <ClInclude Include="CoordinateSystem.h" />
@@ -219,7 +220,7 @@
     <ClInclude Include="p2fPointSet.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="RandomGenerator.h" />
-    <ClInclude Include="rCamera.h" />
+    <ClInclude Include="rCameraProperties.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="rMesh.h" />
     <ClInclude Include="rNdcPanel.h" />
@@ -253,6 +254,7 @@
     <ClCompile Include="amTptr.cpp" />
     <ClCompile Include="am_S_Guid_entComposition.cpp" />
     <ClCompile Include="am_S_UniqueUuidAssociator.cpp" />
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="compManager.cpp" />
     <ClCompile Include="CoordinateSystem.cpp" />
@@ -285,6 +287,7 @@
     </ClCompile>
     <ClCompile Include="PolygonGenerator.cpp" />
     <ClCompile Include="RandomGenerator.cpp" />
+    <ClCompile Include="rCameraProperties.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="rMesh.cpp" />
     <ClCompile Include="rNdcPanel.cpp" />

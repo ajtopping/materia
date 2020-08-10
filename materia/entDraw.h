@@ -6,6 +6,7 @@
 #include "entScene.h"
 #include "Renderer.h"
 #include "mTransform.h"
+#include "Camera.h"
 
 class entDraw
 {

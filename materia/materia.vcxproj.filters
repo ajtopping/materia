@@ -336,10 +336,13 @@
     <ClInclude Include="texRenderTarget.h">
       <Filter>Header Files\texture</Filter>
     </ClInclude>
-    <ClInclude Include="rCamera.h">
+    <ClInclude Include="rRenderLayer.h">
       <Filter>Header Files\renderer</Filter>
     </ClInclude>
-    <ClInclude Include="rRenderLayer.h">
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="rCameraProperties.h">
       <Filter>Header Files\renderer</Filter>
     </ClInclude>
   </ItemGroup>
@@ -477,6 +480,12 @@
       <Filter>Source Files\texture</Filter>
     </ClCompile>
     <ClCompile Include="rRenderLayer.cpp">
+      <Filter>Source Files\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="rCameraProperties.cpp">
       <Filter>Source Files\renderer</Filter>
     </ClCompile>
   </ItemGroup>
