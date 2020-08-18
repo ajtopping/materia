@@ -103,6 +103,12 @@
     <Filter Include="Source Files\texture">
       <UniqueIdentifier>{1af7b4fe-850d-448f-8aab-eb87b2e3f365}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\content">
+      <UniqueIdentifier>{fda96eaa-b0c8-4f1e-838a-91585c70b9ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\content">
+      <UniqueIdentifier>{3560c9c7-c92c-4cda-ac15-9096e1543e5d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -345,6 +351,21 @@
     <ClInclude Include="rCameraProperties.h">
       <Filter>Header Files\renderer</Filter>
     </ClInclude>
+    <ClInclude Include="Scenes.h">
+      <Filter>Header Files\content</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderers.h">
+      <Filter>Header Files\content</Filter>
+    </ClInclude>
+    <ClInclude Include="am_S_Name_Uuid.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="invalid_name_insert_error.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="am_S_NameRegistrar.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -487,6 +508,15 @@
     </ClCompile>
     <ClCompile Include="rCameraProperties.cpp">
       <Filter>Source Files\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes.cpp">
+      <Filter>Source Files\content</Filter>
+    </ClCompile>
+    <ClCompile Include="am_S_Name_Uuid.cpp">
+      <Filter>Source Files\association_model</Filter>
+    </ClCompile>
+    <ClCompile Include="am_S_NameRegistrar.cpp">
+      <Filter>Source Files\association_model</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -175,6 +175,8 @@
     <ClInclude Include="amUuidLocator.h" />
     <ClInclude Include="amUuid_T.hpp" />
     <ClInclude Include="am_S_Guid_entComposition.h" />
+    <ClInclude Include="am_S_NameRegistrar.h" />
+    <ClInclude Include="am_S_Name_Uuid.h" />
     <ClInclude Include="am_S_ssRectangle_entComposition.h" />
     <ClInclude Include="am_S_UniqueUuidAssociator.h" />
     <ClInclude Include="am_S_amTptr.h" />
@@ -201,6 +203,7 @@
     <ClInclude Include="guiPanel.h" />
     <ClInclude Include="illogical_polygon_parameter_error.h" />
     <ClInclude Include="iMouseDragOperationsHandler.h" />
+    <ClInclude Include="invalid_name_insert_error.h" />
     <ClInclude Include="i_OnClick.h" />
     <ClInclude Include="i_S_MouseValues.h" />
     <ClInclude Include="missing_resource_error.h" />
@@ -222,11 +225,13 @@
     <ClInclude Include="RandomGenerator.h" />
     <ClInclude Include="rCameraProperties.h" />
     <ClInclude Include="Renderer.h" />
+    <ClInclude Include="Renderers.h" />
     <ClInclude Include="rMesh.h" />
     <ClInclude Include="rNdcPanel.h" />
     <ClInclude Include="rPoints.h" />
     <ClInclude Include="rProjectionMatrixFactory.h" />
     <ClInclude Include="rRenderLayer.h" />
+    <ClInclude Include="Scenes.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="ShaderProgram.h" />
     <ClInclude Include="ShaderProgramFactory.h" />
@@ -253,6 +258,8 @@
     <ClCompile Include="amPtrFactory.cpp" />
     <ClCompile Include="amTptr.cpp" />
     <ClCompile Include="am_S_Guid_entComposition.cpp" />
+    <ClCompile Include="am_S_NameRegistrar.cpp" />
+    <ClCompile Include="am_S_Name_Uuid.cpp" />
     <ClCompile Include="am_S_UniqueUuidAssociator.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Clock.cpp" />
@@ -294,6 +301,7 @@
     <ClCompile Include="rPoints.cpp" />
     <ClCompile Include="rProjectionMatrixFactory.cpp" />
     <ClCompile Include="rRenderLayer.cpp" />
+    <ClCompile Include="Scenes.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="ShaderProgram.cpp" />
     <ClCompile Include="ShaderProgramFactory.cpp" />
