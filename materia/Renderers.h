@@ -4,7 +4,7 @@ namespace content
 {
 	namespace renderer
 	{
-		void SetupDefaultScene(rRenderLayer &);
-		void SetupRtScene(rRenderLayer &);
+		//void SetupDefaultScene(rRenderLayer &);
+		//void SetupRtScene(rRenderLayer &);
 	}
 }

@@ -6,7 +6,7 @@ void content::scene::SetupDefaultScene( rRenderLayer & render_layer_ref )
 	mMesh * mDefaultDiamond = mMeshPrimitiveFactory::DefaultDiamond();
 	rMesh rDefaultDiamond;
 	rDefaultDiamond.SetMesh(*mDefaultDiamond);
-	rDefaultDiamond.SetShaderProgram(spUniform);
+	////////rDefaultDiamond.SetShaderProgram(spUniform);
 	mTransform transformDefaultDiamond;
 	transformDefaultDiamond.scaleX(0.25);
 	transformDefaultDiamond.scaleY(0.25);

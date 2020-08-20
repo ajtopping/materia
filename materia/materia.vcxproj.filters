@@ -357,13 +357,13 @@
     <ClInclude Include="Renderers.h">
       <Filter>Header Files\content</Filter>
     </ClInclude>
-    <ClInclude Include="am_S_Name_Uuid.h">
-      <Filter>Header Files\association_model</Filter>
-    </ClInclude>
     <ClInclude Include="invalid_name_insert_error.h">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
     <ClInclude Include="am_S_NameRegistrar.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="am_NameRegistrar.h">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
   </ItemGroup>
@@ -512,10 +512,10 @@
     <ClCompile Include="Scenes.cpp">
       <Filter>Source Files\content</Filter>
     </ClCompile>
-    <ClCompile Include="am_S_Name_Uuid.cpp">
+    <ClCompile Include="am_S_NameRegistrar.cpp">
       <Filter>Source Files\association_model</Filter>
     </ClCompile>
-    <ClCompile Include="am_S_NameRegistrar.cpp">
+    <ClCompile Include="am_NameRegistrar.cpp">
       <Filter>Source Files\association_model</Filter>
     </ClCompile>
   </ItemGroup>

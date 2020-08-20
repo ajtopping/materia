@@ -3,10 +3,10 @@
 #include <stdexcept>
 
 /// <summary>
-/// A logic_error that should be thrown when trying to generate polygons with impossible traits
+/// A run_time error that should be thrown when trying to insert a {name, uuid} entry that already exists in a NameRegistrar
 /// </summary>
 /// <remarks>
-/// Ex. Ngon with less than 3 sides
+/// 
 /// </remarks>
 class invalid_name_insert_error :
 	public std::runtime_error

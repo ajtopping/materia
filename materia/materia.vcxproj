@@ -174,9 +174,9 @@
     <ClInclude Include="amUuidHasher.h" />
     <ClInclude Include="amUuidLocator.h" />
     <ClInclude Include="amUuid_T.hpp" />
+    <ClInclude Include="am_NameRegistrar.h" />
     <ClInclude Include="am_S_Guid_entComposition.h" />
     <ClInclude Include="am_S_NameRegistrar.h" />
-    <ClInclude Include="am_S_Name_Uuid.h" />
     <ClInclude Include="am_S_ssRectangle_entComposition.h" />
     <ClInclude Include="am_S_UniqueUuidAssociator.h" />
     <ClInclude Include="am_S_amTptr.h" />
@@ -257,9 +257,9 @@
   <ItemGroup>
     <ClCompile Include="amPtrFactory.cpp" />
     <ClCompile Include="amTptr.cpp" />
+    <ClCompile Include="am_NameRegistrar.cpp" />
     <ClCompile Include="am_S_Guid_entComposition.cpp" />
     <ClCompile Include="am_S_NameRegistrar.cpp" />
-    <ClCompile Include="am_S_Name_Uuid.cpp" />
     <ClCompile Include="am_S_UniqueUuidAssociator.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Clock.cpp" />

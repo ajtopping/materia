@@ -39,6 +39,7 @@
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClCompile Include="amUuidTest.cpp" />
+    <ClCompile Include="am_NameRegistrarTest.cpp" />
     <ClCompile Include="entSceneTest.cpp" />
     <ClCompile Include="shGlobalUniformMapTest.cpp" />
     <ClCompile Include="ssRectangleTest.cpp" />

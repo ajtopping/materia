@@ -1,16 +1,15 @@
 #pragma once
 
 /// <summary>
-/// A singleton that uniquely pairs a Name (std::string) and an amUuid.
+/// A singleton wrapper for am_NameRegistrar
 /// </summary>
 /// <remarks>
-/// Renaming and replacing the value of an already existing entry must be done explicitly with provided methods.
+/// 
 /// </remarks>
 
 #include <unordered_map>
 
-#include "amUuid.h"
-#include "invalid_name_insert_error.h"
+#include "am_NameRegistrar.h"
 
 class am_S_NameRegistrar
 {
@@ -33,14 +32,7 @@ private:
 	am_S_NameRegistrar() {};
 	static am_S_NameRegistrar * get_instance_();
 
-	void static insert_or_update_entry_(std::string, amUuid);
-	void static remove_entry_(std::string, amUuid);
-
-	bool static is_valid_name(std::string);
-	bool static is_valid_uuid(amUuid);
-
-	std::unordered_map<std::string, amUuid> dict_string_to_uuid_;
-	std::unordered_map<amUuid, std::string, amUuidHasher> dict_uuid_to_string_;
+	am_NameRegistrar name_registrar_;
 
 	static am_S_NameRegistrar * instance_;
 };
