@@ -7,24 +7,25 @@ void am_NameRegistrar::rename_or_insert(std::string name, amUuid uuid)
 
 void am_NameRegistrar::insert(std::string name, amUuid uuid)
 {
-	std::string error_message = "";
+	std::string error_message = "am_NameRegistrar::insert :";
 	bool has_error = false;
 
 	if (has_name(name))
 	{
-		error_message += "am_NameRegistrar::insert : An entry with the name '" + name + "' already exists.\n";
+		error_message += " An entry with the name '" + name + "' already exists.";
 		has_error = true;
 	}
 
 	if (has_uuid(uuid))
 	{
 		std::string name = find_name(uuid);
-		error_message += "am_NameRegistrar::insert : A uuid already corresponds to the name '" + name + "'\n";
+		error_message += " A uuid already corresponds to the name '" + name + "'";
 		has_error = true;
 	}
 
 	if (has_error)
 	{
+		error_message += "\n";
 		throw invalid_name_insert_error(error_message);
 
 		return;

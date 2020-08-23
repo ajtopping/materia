@@ -8,7 +8,7 @@
 /// </remarks>
 
 #include "amUuid.h"
-#include "amUuid_T.hpp"
+#include "am_Uuid_T.hpp"
 
 template <class T>
 class compMananger
@@ -17,5 +17,5 @@ public:
 	amUuid NewComponent();
 	bool DeleteComponent( amUuid );
 private:
-	amUuid_T<T> tmap_;
+	am_Uuid_T<T> tmap_;
 };

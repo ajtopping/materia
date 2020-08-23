@@ -12,24 +12,25 @@
 #include "amUuid.h"
 
 template <class T>
-class amUuid_T
+class am_Uuid_T
 {
 public:
 	void insert(amUuid, T);
 	T find(amUuid);
+	bool has(amUuid);
 	size_t remove(amUuid);
 private:
 	std::unordered_map<amUuid, T, amUuidHasher> dictionary_;
 };
 
 template <class T>
-void amUuid_T<T>::insert(amUuid uuid, T template_class)
+void am_Uuid_T<T>::insert(amUuid uuid, T template_class)
 {
 	this->dictionary_.insert_or_assign(uuid, template_class);
 }
 
 template <class T>
-T amUuid_T<T>::find(amUuid uuid)
+T am_Uuid_T<T>::find(amUuid uuid)
 {
 
 	if (this->dictionary_.count(uuid) == 0)
@@ -43,7 +44,19 @@ T amUuid_T<T>::find(amUuid uuid)
 }
 
 template <class T>
-size_t amUuid_T<T>::remove(amUuid uuid)
+bool am_Uuid_T<T>::has(amUuid uuid)
+{
+
+	if (this->dictionary_.count(uuid) == 0)
+	{
+		return false;
+	}
+
+	return true;
+}
+
+template <class T>
+size_t am_Uuid_T<T>::remove(amUuid uuid)
 {
 	return this->dictionary_.erase(uuid);
 }

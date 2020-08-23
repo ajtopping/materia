@@ -300,9 +300,6 @@
     <ClInclude Include="opMouseDragTransform.h">
       <Filter>Header Files\operation</Filter>
     </ClInclude>
-    <ClInclude Include="amUuid_T.hpp">
-      <Filter>Header Files\association_model</Filter>
-    </ClInclude>
     <ClInclude Include="am_S_Uuid_T.hpp">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
@@ -364,6 +361,21 @@
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
     <ClInclude Include="am_NameRegistrar.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="am_Uuid_T.hpp">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="Name.hpp">
+      <Filter>Header Files\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Parent.hpp">
+      <Filter>Header Files\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="am_ParentRegistrar.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="cyclic_parent_error.h">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
   </ItemGroup>
@@ -518,6 +530,9 @@
     <ClCompile Include="am_NameRegistrar.cpp">
       <Filter>Source Files\association_model</Filter>
     </ClCompile>
+    <ClCompile Include="am_ParentRegistrar.cpp">
+      <Filter>Source Files\association_model</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="vertexshader.vert">
@@ -543,14 +558,14 @@
     </CopyFileToFolders>
   </ItemGroup>
   <ItemGroup>
-    <None Include="amUuid_T.tpp">
-      <Filter>Source Files\association_model</Filter>
-    </None>
     <None Include="am_S_Uuid_T.tpp">
       <Filter>Source Files\association_model</Filter>
     </None>
     <None Include="shUniformT.tpp">
       <Filter>Source Files\shader</Filter>
+    </None>
+    <None Include="am_Uuid_T.tpp">
+      <Filter>Source Files\association_model</Filter>
     </None>
   </ItemGroup>
 </Project>

@@ -173,7 +173,8 @@
     <ClInclude Include="amUuidEquator.h" />
     <ClInclude Include="amUuidHasher.h" />
     <ClInclude Include="amUuidLocator.h" />
-    <ClInclude Include="amUuid_T.hpp" />
+    <ClInclude Include="am_ParentRegistrar.h" />
+    <ClInclude Include="am_Uuid_T.hpp" />
     <ClInclude Include="am_NameRegistrar.h" />
     <ClInclude Include="am_S_Guid_entComposition.h" />
     <ClInclude Include="am_S_NameRegistrar.h" />
@@ -204,18 +205,21 @@
     <ClInclude Include="illogical_polygon_parameter_error.h" />
     <ClInclude Include="iMouseDragOperationsHandler.h" />
     <ClInclude Include="invalid_name_insert_error.h" />
+    <ClInclude Include="cyclic_parent_error.h" />
     <ClInclude Include="i_OnClick.h" />
     <ClInclude Include="i_S_MouseValues.h" />
     <ClInclude Include="missing_resource_error.h" />
     <ClInclude Include="mMesh.h" />
     <ClInclude Include="mMeshPrimitiveFactory.h" />
     <ClInclude Include="mTransform.h" />
+    <ClInclude Include="Name.hpp" />
     <ClInclude Include="opCopyValue.h" />
     <ClInclude Include="opMouseDragTransform.h" />
     <ClInclude Include="opMouseTweakTransform.h" />
     <ClInclude Include="opOperation.h" />
     <ClInclude Include="opSetValue.h" />
     <ClInclude Include="opTranslateTransformXY.h" />
+    <ClInclude Include="Parent.hpp" />
     <ClInclude Include="PolygonGenerator.h" />
     <ClInclude Include="oRenderableMesh.h" />
     <ClInclude Include="oRenderablePointSet.h" />
@@ -258,6 +262,7 @@
     <ClCompile Include="amPtrFactory.cpp" />
     <ClCompile Include="amTptr.cpp" />
     <ClCompile Include="am_NameRegistrar.cpp" />
+    <ClCompile Include="am_ParentRegistrar.cpp" />
     <ClCompile Include="am_S_Guid_entComposition.cpp" />
     <ClCompile Include="am_S_NameRegistrar.cpp" />
     <ClCompile Include="am_S_UniqueUuidAssociator.cpp" />
@@ -348,7 +353,7 @@
     </CopyFileToFolders>
   </ItemGroup>
   <ItemGroup>
-    <None Include="amUuid_T.tpp" />
+    <None Include="am_Uuid_T.tpp" />
     <None Include="am_S_Uuid_T.tpp" />
     <None Include="shUniformT.tpp" />
   </ItemGroup>
