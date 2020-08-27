@@ -360,9 +360,6 @@
     <ClInclude Include="am_S_NameRegistrar.h">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
-    <ClInclude Include="am_NameRegistrar.h">
-      <Filter>Header Files\association_model</Filter>
-    </ClInclude>
     <ClInclude Include="am_Uuid_T.hpp">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
@@ -372,10 +369,28 @@
     <ClInclude Include="Parent.hpp">
       <Filter>Header Files\utility</Filter>
     </ClInclude>
-    <ClInclude Include="am_ParentRegistrar.h">
+    <ClInclude Include="cyclic_parent_error.h">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
-    <ClInclude Include="cyclic_parent_error.h">
+    <ClInclude Include="no_valid_component_error.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="no_valid_entity_error.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="am_NameRegistry.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="am_ParentRegistry.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="am_UuidRegistry.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="Uuid.hpp">
+      <Filter>Header Files\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="am_HasUuid.h">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
   </ItemGroup>
@@ -527,10 +542,10 @@
     <ClCompile Include="am_S_NameRegistrar.cpp">
       <Filter>Source Files\association_model</Filter>
     </ClCompile>
-    <ClCompile Include="am_NameRegistrar.cpp">
+    <ClCompile Include="am_NameRegistry.cpp">
       <Filter>Source Files\association_model</Filter>
     </ClCompile>
-    <ClCompile Include="am_ParentRegistrar.cpp">
+    <ClCompile Include="am_ParentRegistry.cpp">
       <Filter>Source Files\association_model</Filter>
     </ClCompile>
   </ItemGroup>

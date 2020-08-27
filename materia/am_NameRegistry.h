@@ -12,7 +12,7 @@
 #include "amUuid.h"
 #include "invalid_name_insert_error.h"
 
-class am_NameRegistrar
+class am_NameRegistry
 {
 public:
 

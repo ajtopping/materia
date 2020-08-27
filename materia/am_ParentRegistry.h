@@ -12,7 +12,7 @@
 #include "amUuid.h"
 #include "cyclic_parent_error.h"
 
-class am_ParentRegistrar
+class am_ParentRegistry
 {
 public:
 	void make_parent(amUuid, amUuid);

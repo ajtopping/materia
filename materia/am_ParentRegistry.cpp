@@ -1,7 +1,7 @@
 
-#include "am_ParentRegistrar.h"
+#include "am_ParentRegistry.h"
 
-void am_ParentRegistrar::make_parent(amUuid child_uuid, amUuid parent_uuid)
+void am_ParentRegistry::make_parent(amUuid child_uuid, amUuid parent_uuid)
 {
 	std::string error_message = "am_ParentRegistrar::make_parent :";
 	bool has_error = false;
@@ -29,7 +29,7 @@ void am_ParentRegistrar::make_parent(amUuid child_uuid, amUuid parent_uuid)
 	make_entry_(child_uuid, parent_uuid);
 }
 
-amUuid am_ParentRegistrar::find_parent(amUuid child_uuid)
+amUuid am_ParentRegistry::find_parent(amUuid child_uuid)
 {
 	if (child_to_parent_map_.count(child_uuid) == 0)
 	{
@@ -41,7 +41,7 @@ amUuid am_ParentRegistrar::find_parent(amUuid child_uuid)
 	}
 }
 
-bool am_ParentRegistrar::has_parent(amUuid child_uuid)
+bool am_ParentRegistry::has_parent(amUuid child_uuid)
 {
 	if (child_to_parent_map_.count(child_uuid) == 0)
 	{
@@ -51,12 +51,12 @@ bool am_ParentRegistrar::has_parent(amUuid child_uuid)
 	return true;
 }
 
-void am_ParentRegistrar::clear_parent(amUuid child_uuid)
+void am_ParentRegistry::clear_parent(amUuid child_uuid)
 {
 	remove_entry_(child_uuid);
 }
 
-void am_ParentRegistrar::clear_child(amUuid child_uuid, amUuid parent_uuid)
+void am_ParentRegistry::clear_child(amUuid child_uuid, amUuid parent_uuid)
 {
 	amUuid found_parent_uuid = find_parent(child_uuid);
 	if (parent_uuid == child_uuid)
@@ -65,22 +65,22 @@ void am_ParentRegistrar::clear_child(amUuid child_uuid, amUuid parent_uuid)
 	}
 }
 
-void am_ParentRegistrar::clear_children(amUuid parent_uuid)
+void am_ParentRegistry::clear_children(amUuid parent_uuid)
 {
 	throw std::logic_error("am_ParentRegistrar::clear_children() : this function has not been implemented yet.\n");
 }
 
-void am_ParentRegistrar::make_entry_(amUuid child_uuid, amUuid parent_uuid)
+void am_ParentRegistry::make_entry_(amUuid child_uuid, amUuid parent_uuid)
 {
 	child_to_parent_map_.insert_or_assign(child_uuid, parent_uuid);
 }
 
-void am_ParentRegistrar::remove_entry_(amUuid child_uuid)
+void am_ParentRegistry::remove_entry_(amUuid child_uuid)
 {
 	child_to_parent_map_.erase(child_uuid);
 }
 
-bool am_ParentRegistrar::has_entry_(amUuid child_uuid, amUuid parent_uuid)
+bool am_ParentRegistry::has_entry_(amUuid child_uuid, amUuid parent_uuid)
 {
 
 	amUuid found_parent_uuid = find_parent(child_uuid);

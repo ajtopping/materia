@@ -173,9 +173,11 @@
     <ClInclude Include="amUuidEquator.h" />
     <ClInclude Include="amUuidHasher.h" />
     <ClInclude Include="amUuidLocator.h" />
-    <ClInclude Include="am_ParentRegistrar.h" />
+    <ClInclude Include="am_HasUuid.h" />
+    <ClInclude Include="am_ParentRegistry.h" />
+    <ClInclude Include="am_UuidRegistry.h" />
     <ClInclude Include="am_Uuid_T.hpp" />
-    <ClInclude Include="am_NameRegistrar.h" />
+    <ClInclude Include="am_NameRegistry.h" />
     <ClInclude Include="am_S_Guid_entComposition.h" />
     <ClInclude Include="am_S_NameRegistrar.h" />
     <ClInclude Include="am_S_ssRectangle_entComposition.h" />
@@ -213,6 +215,8 @@
     <ClInclude Include="mMeshPrimitiveFactory.h" />
     <ClInclude Include="mTransform.h" />
     <ClInclude Include="Name.hpp" />
+    <ClInclude Include="no_valid_component_error.h" />
+    <ClInclude Include="no_valid_entity_error.h" />
     <ClInclude Include="opCopyValue.h" />
     <ClInclude Include="opMouseDragTransform.h" />
     <ClInclude Include="opMouseTweakTransform.h" />
@@ -255,14 +259,15 @@
     <ClInclude Include="ssRectangle.h" />
     <ClInclude Include="ssRectangleSpace.h" />
     <ClInclude Include="texRenderTarget.h" />
+    <ClInclude Include="Uuid.hpp" />
     <ClInclude Include="VertexShader.h" />
     <ClInclude Include="wWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="amPtrFactory.cpp" />
     <ClCompile Include="amTptr.cpp" />
-    <ClCompile Include="am_NameRegistrar.cpp" />
-    <ClCompile Include="am_ParentRegistrar.cpp" />
+    <ClCompile Include="am_NameRegistry.cpp" />
+    <ClCompile Include="am_ParentRegistry.cpp" />
     <ClCompile Include="am_S_Guid_entComposition.cpp" />
     <ClCompile Include="am_S_NameRegistrar.cpp" />
     <ClCompile Include="am_S_UniqueUuidAssociator.cpp" />
