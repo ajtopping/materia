@@ -208,6 +208,7 @@
     <ClInclude Include="iMouseDragOperationsHandler.h" />
     <ClInclude Include="invalid_name_insert_error.h" />
     <ClInclude Include="cyclic_parent_error.h" />
+    <ClInclude Include="invalid_registration_error.h" />
     <ClInclude Include="i_OnClick.h" />
     <ClInclude Include="i_S_MouseValues.h" />
     <ClInclude Include="missing_resource_error.h" />
@@ -271,6 +272,7 @@
     <ClCompile Include="am_S_Guid_entComposition.cpp" />
     <ClCompile Include="am_S_NameRegistrar.cpp" />
     <ClCompile Include="am_S_UniqueUuidAssociator.cpp" />
+    <ClCompile Include="am_UuidRegistry.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="compManager.cpp" />

@@ -393,6 +393,9 @@
     <ClInclude Include="am_HasUuid.h">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
+    <ClInclude Include="invalid_registration_error.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -546,6 +549,9 @@
       <Filter>Source Files\association_model</Filter>
     </ClCompile>
     <ClCompile Include="am_ParentRegistry.cpp">
+      <Filter>Source Files\association_model</Filter>
+    </ClCompile>
+    <ClCompile Include="am_UuidRegistry.cpp">
       <Filter>Source Files\association_model</Filter>
     </ClCompile>
   </ItemGroup>

@@ -17,10 +17,11 @@ public:
 	am_HasUuid(am_HasUuid const&) = delete;
 	void operator=(am_HasUuid const&) = delete;
 
+	friend class am_UuidRegistry;
+
 	amUuid get_uuid() { return uuid_; }
 protected:
-	amUuid uuid_ = amUuid(0);
-
-	friend am_UuidRegistry;
+	
 private:
+	amUuid uuid_ = amUuid(0);
 };
