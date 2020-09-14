@@ -2,7 +2,7 @@
 
 #include <typeinfo>
 
-//#include "am_UuidRegistry.h"
+#include "am_UuidRegistry.h"
 #include "am_HasUuidRegistryTicket.h"
 
 namespace util

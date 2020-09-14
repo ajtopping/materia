@@ -9,7 +9,7 @@
 
 //#include "amUuid.h"
 #include "amUuidRegistryTicket.h"
-#include "am_UuidRegistry.h"
+//#include "am_UuidRegistry.h"
 
 class am_HasUuidRegistryTicket
 {
