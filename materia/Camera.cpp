@@ -17,14 +17,14 @@ glm::mat4 util::camera::GetActiveCameraViewMatrix()
 	glm::vec3 pos = glm::vec3(0.0f, 0.0f, 10.0f);
 	glm::vec3 right = glm::vec3(0.0f, 1.0f, 0.0f);
 
-	if (util::HasComponent<mTransform *>(util::camera::ActiveCamera))
+	if (util::component::HasComponent<mTransform *>(util::camera::ActiveCamera))
 	{
-		pos =  util::GetComponent<mTransform *>(util::camera::ActiveCamera)->get_pos();
+		pos =  util::component::GetComponent<mTransform *>(util::camera::ActiveCamera)->get_pos();
 	}
 	
-	if (util::HasComponent<rCameraProperties *>(util::camera::ActiveCamera))
+	if (util::component::HasComponent<rCameraProperties *>(util::camera::ActiveCamera))
 	{
-		camera_ptr = util::GetComponent<rCameraProperties *>(util::camera::ActiveCamera);
+		camera_ptr = util::component::GetComponent<rCameraProperties *>(util::camera::ActiveCamera);
 	}
 	else
 	{

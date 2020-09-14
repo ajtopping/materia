@@ -10,6 +10,7 @@
 #include <chrono>
 
 #include "Clock.h"
+//#include "Uuid.hpp"
 
 class amUuid
 {
@@ -26,10 +27,7 @@ public:
 
 	amUuid()
 	{
-		auto now = std::chrono::high_resolution_clock::now();
-		auto nanoseconds = std::chrono::duration_cast<std::chrono::nanoseconds>(now.time_since_epoch());
-
-		data_ = nanoseconds.count();
+		data_ = generate_unique_data_();
 	}
 
 	amUuid(long long uuid)
@@ -37,11 +35,36 @@ public:
 		data_ = uuid;
 	}
 
+	/*
+	amUuid(amUuid const & ref)
+	{
+		this->data_ = generate_unique_data_();
+	}
+
+	void operator=(amUuid const & ref)
+	{
+		this->data_ = generate_unique_data_();
+	}
+	*/
+
+	void clone_data(amUuid const & ref)
+	{
+		this->data_ = ref.get_data();
+	}
+
 	long long get_data() const { return data_; }
 
 	bool isNil() const { return data_ == 0; }
 private:
 	long long data_;
+
+	long long generate_unique_data_()
+	{
+		auto now = std::chrono::high_resolution_clock::now();
+		auto nanoseconds = std::chrono::duration_cast<std::chrono::nanoseconds>(now.time_since_epoch());
+
+		return nanoseconds.count();
+	}
 
 };
 

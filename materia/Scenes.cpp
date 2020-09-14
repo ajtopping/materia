@@ -10,8 +10,8 @@ void content::scene::SetupDefaultScene( rRenderLayer & render_layer_ref )
 	mTransform transformDefaultDiamond;
 	transformDefaultDiamond.scaleX(0.25);
 	transformDefaultDiamond.scaleY(0.25);
-	util::AttachComponent<Renderer *>(entity_default_diamond.get_uuid(), &rDefaultDiamond);
-	util::AttachComponent<mTransform *>(entity_default_diamond.get_uuid(), &transformDefaultDiamond);
+	util::component::AttachComponent<Renderer *>(entity_default_diamond.get_uuid(), &rDefaultDiamond);
+	util::component::AttachComponent<mTransform *>(entity_default_diamond.get_uuid(), &transformDefaultDiamond);
 
 	entComposition entity_ndc_panel;
 	mMesh * mNdcPanel = mMeshPrimitiveFactory::NdcPanel();
@@ -19,14 +19,14 @@ void content::scene::SetupDefaultScene( rRenderLayer & render_layer_ref )
 	rrNdcPanel.SetMesh(*mNdcPanel);
 	//rrNdcPanel.set_projection_matrix(rProjectionMatrixFactory::WindowOrthoNdc(win));
 	mTransform ndcPanelTransform;
-	util::AttachComponent<Renderer *>(entity_ndc_panel.get_uuid(), &rrNdcPanel);
-	util::AttachComponent<mTransform *>(entity_ndc_panel.get_uuid(), &ndcPanelTransform);
+	util::component::AttachComponent<Renderer *>(entity_ndc_panel.get_uuid(), &rrNdcPanel);
+	util::component::AttachComponent<mTransform *>(entity_ndc_panel.get_uuid(), &ndcPanelTransform);
 
 	entScene defaultScene;
 	am_S_Uuid_T<entScene *>::insert(defaultScene.get_uuid(), &defaultScene);
 	entComposition defaultCamera;
 	rCameraProperties defaultCameraProperties;
-	util::AttachComponent<rCameraProperties *>(defaultCamera.get_uuid(), &defaultCameraProperties);
+	util::component::AttachComponent<rCameraProperties *>(defaultCamera.get_uuid(), &defaultCameraProperties);
 	
 	defaultScene.addCompositionEntity(entity_ndc_panel);
 	defaultScene.addCompositionEntity(entity_default_diamond);

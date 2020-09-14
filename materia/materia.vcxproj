@@ -166,6 +166,7 @@
     <ClInclude Include="amPtrFactory.h" />
     <ClInclude Include="amPtrPrimitive.h" />
     <ClInclude Include="amPtrFloat.h" />
+    <ClInclude Include="amUuidRegistryTicket.h" />
     <ClInclude Include="amTptr.h" />
     <ClInclude Include="amTypeConversion.h" />
     <ClInclude Include="amTypeConverter.h" />
@@ -173,7 +174,7 @@
     <ClInclude Include="amUuidEquator.h" />
     <ClInclude Include="amUuidHasher.h" />
     <ClInclude Include="amUuidLocator.h" />
-    <ClInclude Include="am_HasUuid.h" />
+    <ClInclude Include="am_HasUuidRegistryTicket.h" />
     <ClInclude Include="am_ParentRegistry.h" />
     <ClInclude Include="am_UuidRegistry.h" />
     <ClInclude Include="am_Uuid_T.hpp" />
@@ -324,6 +325,7 @@
     <ClCompile Include="ssRectangle.cpp" />
     <ClCompile Include="ssRectangleSpace.cpp" />
     <ClCompile Include="texRenderTarget.cpp" />
+    <ClCompile Include="Uuid.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="dots.frag">

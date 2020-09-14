@@ -390,10 +390,13 @@
     <ClInclude Include="Uuid.hpp">
       <Filter>Header Files\utility</Filter>
     </ClInclude>
-    <ClInclude Include="am_HasUuid.h">
+    <ClInclude Include="invalid_registration_error.h">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
-    <ClInclude Include="invalid_registration_error.h">
+    <ClInclude Include="amUuidRegistryTicket.h">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
+    <ClInclude Include="am_HasUuidRegistryTicket.h">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
   </ItemGroup>
@@ -553,6 +556,9 @@
     </ClCompile>
     <ClCompile Include="am_UuidRegistry.cpp">
       <Filter>Source Files\association_model</Filter>
+    </ClCompile>
+    <ClCompile Include="Uuid.cpp">
+      <Filter>Source Files\utility</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

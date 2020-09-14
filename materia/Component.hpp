@@ -2,7 +2,7 @@
 
 #include "am_S_Uuid_T.hpp"
 #include "am_Uuid_T.hpp"
-#include "am_NameRegistrar.h"
+//#include "am_NameRegistry.h"
 #include "no_valid_component_error.h"
 #include "no_valid_entity_error.h"
 
@@ -23,7 +23,8 @@ namespace util
 		T GetComponent(amUuid composition_uuid)
 		{
 			//return am_S_Uuid_T<T>::find(composition_uuid);
-			component_uuid = owner_to_component_<T>.find(composition_uuid);
+			prevent_compiling; // <-- The below workflow is obsolete (and doesnt even work). Replace with util::uuid::Has/GetRegisteredType<T>(amUuid)
+			amUuid component_uuid = owner_to_component_<T>.find(composition_uuid);
 			return uuid_to_t_<T>.find(component_uuid);
 		}
 
