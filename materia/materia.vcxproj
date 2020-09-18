@@ -185,6 +185,7 @@
     <ClInclude Include="am_S_UniqueUuidAssociator.h" />
     <ClInclude Include="am_S_amTptr.h" />
     <ClInclude Include="am_S_Uuid_T.hpp" />
+    <ClInclude Include="am_Uuid_Uuid.hpp" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Clock.h" />
     <ClInclude Include="compManager.h" />

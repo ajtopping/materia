@@ -5,6 +5,7 @@ Renderer interface
 Can be used for rendering raw GLSL
 */
 
+#include "am_HasUuidRegistryTicket.h"
 #include "ShaderProgram.h"
 #include "mTransform.h"
 #include "rProjectionMatrixFactory.h"
@@ -12,7 +13,7 @@ Can be used for rendering raw GLSL
 #include "mat3x3.hpp"
 #include "ext/matrix_transform.hpp"
 
-class Renderer
+class Renderer : public am_HasUuidRegistryTicket
 {
 public:
 	void SetShaderProgram(ShaderProgram *);
@@ -27,7 +28,7 @@ public:
 	void Draw();
 	virtual void Draw(glm::mat4 mvp) = 0;
 	
-
+	void make_dynamic_cast_happy() {};
 protected:
 	GLfloat u_runtime_seconds_ = 0.0;
 	GLuint u_resolution_x_ = 1;

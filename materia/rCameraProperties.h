@@ -8,6 +8,8 @@
 /// looking down the forward vector given by vec3( 0, 0, -1 )
 /// </remarks>
 
+#include "am_HasUuidRegistryTicket.h"
+
 #include "GL/glew.h"
 #include "mat4x4.hpp"
 #include "ext/matrix_transform.hpp"
@@ -20,7 +22,7 @@
 #include "amUuid.h"
 #include "mTransform.h"
 
-class rCameraProperties
+class rCameraProperties : public am_HasUuidRegistryTicket
 {
 public:
 	glm::mat4 get_camera_matrix();
@@ -28,6 +30,8 @@ public:
 	GLfloat fov = 75.0f;
 	GLfloat near_clip = 0.01f;
 	GLfloat far_clip = 1000.0f;
+
+	void make_dynamic_cast_happy() {};
 private:
 	void compose_matrix_();
 

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "am_HasUuidRegistryTicket.h"
+
 #include "mat4x4.hpp"
 #include "ext/matrix_transform.hpp"
 #include "gtc/quaternion.hpp"
@@ -28,7 +30,7 @@ SET(RETURN_TYPE, QUALIFIER, ELEMENT, INDEX)
 /// <remarks>
 /// Add more details here.
 /// </remarks>
-class mTransform
+class mTransform : public am_HasUuidRegistryTicket
 {
 public:
 	GETSET(float, pos, X, 0);
@@ -48,6 +50,8 @@ public:
 	glm::vec3 get_pos() { return pos_; }
 	glm::vec4 get_rot() { return rot_; }
 	glm::vec3 get_scale() { return scale_; }
+
+	void make_dynamic_cast_happy() {};
 private:
 	glm::vec3 pos_ = glm::vec3(0.0f);
 	glm::vec4 rot_ = glm::vec4(0.0f);

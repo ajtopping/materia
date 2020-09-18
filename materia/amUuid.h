@@ -73,6 +73,6 @@ class amUuidHasher
 public:
 	size_t operator()(const amUuid & rh) const
 	{
-		return rh.get_data();
+		return (size_t)rh.get_data();
 	}
 };

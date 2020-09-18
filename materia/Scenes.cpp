@@ -2,6 +2,7 @@
 
 void content::scene::SetupDefaultScene( rRenderLayer & render_layer_ref )
 {
+	/*
 	entComposition entity_default_diamond;
 	mMesh * mDefaultDiamond = mMeshPrimitiveFactory::DefaultDiamond();
 	rMesh rDefaultDiamond;
@@ -30,4 +31,5 @@ void content::scene::SetupDefaultScene( rRenderLayer & render_layer_ref )
 	
 	defaultScene.addCompositionEntity(entity_ndc_panel);
 	defaultScene.addCompositionEntity(entity_default_diamond);
+	*/
 }

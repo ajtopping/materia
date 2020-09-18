@@ -18,5 +18,10 @@ namespace util
 		{
 			uuid_registry_.Unregister(uuid);
 		}
+
+		bool IsRegistered(am_HasUuidRegistryTicket & ref)
+		{
+			return uuid_registry_.has(ref.get_uuid());
+		}
 	}
 }

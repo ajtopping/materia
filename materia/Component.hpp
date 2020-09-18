@@ -2,6 +2,8 @@
 
 #include "am_S_Uuid_T.hpp"
 #include "am_Uuid_T.hpp"
+#include "am_Uuid_Uuid.hpp"
+#include "Uuid.hpp"
 //#include "am_NameRegistry.h"
 #include "no_valid_component_error.h"
 #include "no_valid_entity_error.h"
@@ -13,43 +15,44 @@ namespace util
 		namespace //Anonymous
 		{
 			template <class T>
-			am_Uuid_T<T> uuid_to_t_;
-
-			template <class T>
-			am_Uuid_T<T> owner_to_component_;
+			am_Uuid_Uuid<T> owner_to_component_;
 		}
 
 		template <class T>
-		T GetComponent(amUuid composition_uuid)
+		bool HasComponent(amUuid owner_uuid)
 		{
-			//return am_S_Uuid_T<T>::find(composition_uuid);
-			prevent_compiling; // <-- The below workflow is obsolete (and doesnt even work). Replace with util::uuid::Has/GetRegisteredType<T>(amUuid)
-			amUuid component_uuid = owner_to_component_<T>.find(composition_uuid);
-			return uuid_to_t_<T>.find(component_uuid);
+			amUuid component_uuid = owner_to_component_<T>.find(owner_uuid);
+			return util::uuid::HasRegisteredType<T>(component_uuid);
 		}
 
 		template <class T>
-		bool HasComponent(amUuid composition_uuid)
+		T GetComponent(amUuid owner_uuid)
 		{
-			//return am_S_Uuid_T<T>::has(composition_uuid);
-			return owner_to_component_<T>.has(composition_uuid);
-		}
+			amUuid component_uuid = owner_to_component_<T>.find(owner_uuid);
+			std::string error_msg = "util::component::GetComponent : ";
 
-		template <class T>
-		void AttachComponent(amUuid composition_uuid, T t_val)
-		{
-			return am_S_Uuid_T<T>::insert(composition_uuid, t_val);
+			if (component_uuid.isNil())
+			{
+				error_msg += "owner_uuid has no corresponding component_uuid for component type " + typeid(T).name() + " / n";
+				throw no_valid_component_error(error_msg);
+			}
+
+			if (!HasComponent<T>(owner_uuid))
+			{
+				error_msg += "the corresponding component_uuid has not been registered with util::uuid registry of type " + typeid(T).name() + " / n";
+				throw no_valid_component_error(error_msg);
+			}
+
+			return util::uuid::GetRegisteredType<T>(component_uuid);
 		}
 
 		template <class T>
 		void AttachComponent(amUuid owner_uuid, amUuid component_uuid)
 		{
-			//return am_S_Uuid_T<T>::insert(composition_uuid, t_val);
-
 			bool has_error = false;
 			std::string error_msg = "util::component::AttachComponent : ";
 
-			if (!uuid_to_t_<T>.has(component_uuid))
+			if (!util::uuid::HasRegisteredType<T>(component_uuid))
 			{
 				has_error = true;
 				error_msg += " component_uuid does not correspond to a component of type " + typeid(T).name() + "/n";
@@ -64,13 +67,21 @@ namespace util
 
 		}
 
-		/*
 		template <class T>
-		T NewComponent(amUuid composition_uuid)
+		void RegisterAndAttachComponent(amUuid owner_uuid, am_HasUuidRegistryTicket & ref)
 		{
-			broken
-			return am_S_Uuid_T<T>::insert(composition_uuid, t_val);
+			if (!util::uuid::IsRegistered(ref))
+			{
+				util::uuid::Register(ref);
+			}
+
+			AttachComponent<T>(owner_uuid, ref.get_uuid());
 		}
-		*/
+
+		template <class T>
+		size_t DetachComponent(amUuid owner_uuid)
+		{
+			return owner_to_component_<T>.remove(owner_uuid);
+		}
 	}
 }

@@ -399,6 +399,9 @@
     <ClInclude Include="am_HasUuidRegistryTicket.h">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
+    <ClInclude Include="am_Uuid_Uuid.hpp">
+      <Filter>Header Files\association_model</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

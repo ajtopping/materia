@@ -14,9 +14,9 @@
 class am_HasUuidRegistryTicket
 {
 public:
-	am_HasUuidRegistryTicket() = delete;
-	am_HasUuidRegistryTicket(am_HasUuidRegistryTicket const&) = delete;
-	void operator=(am_HasUuidRegistryTicket const&) = delete;
+	//am_HasUuidRegistryTicket() = delete;
+	//am_HasUuidRegistryTicket(am_HasUuidRegistryTicket const&) = delete;
+	//void operator=(am_HasUuidRegistryTicket const&) = delete; // std::unordered_map needs operator=
 
 	friend class am_UuidRegistry;
 

@@ -4,6 +4,7 @@
 
 #include "am_UuidRegistry.h"
 #include "am_HasUuidRegistryTicket.h"
+#include "no_valid_component_error.h"
 
 namespace util
 {
@@ -20,14 +21,16 @@ namespace util
 
 		void Unregister(amUuid uuid);
 
-
-		/*
+		bool IsRegistered(am_HasUuidRegistryTicket & ref);
+ 
 		template <class T>
 		bool HasRegisteredType(amUuid uuid)
 		{
+			am_HasUuidRegistryTicket & ref;
+
 			try
 			{
-				am_HasUuidRegistryTicket & ref = uuid_registry_.get(uuid);
+				ref = uuid_registry_.get(uuid);
 			}
 			catch (std::out_of_range e)
 			{
@@ -61,6 +64,6 @@ namespace util
 
 			// guaranteed safe?
 			return static_cast<T&>(uuid_registry_.get(uuid));
-		} */
+		}
 	}
 }
