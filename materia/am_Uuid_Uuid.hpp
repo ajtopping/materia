@@ -35,7 +35,7 @@ amUuid am_Uuid_Uuid<T>::find(amUuid key)
 
 	if (this->dictionary_.count(key) == 0)
 	{
-		return nullptr;
+		return amUuid(0);
 	}
 	else
 	{

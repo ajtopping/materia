@@ -357,9 +357,6 @@
     <ClInclude Include="invalid_name_insert_error.h">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
-    <ClInclude Include="am_S_NameRegistrar.h">
-      <Filter>Header Files\association_model</Filter>
-    </ClInclude>
     <ClInclude Include="am_Uuid_T.hpp">
       <Filter>Header Files\association_model</Filter>
     </ClInclude>
@@ -547,9 +544,6 @@
     </ClCompile>
     <ClCompile Include="Scenes.cpp">
       <Filter>Source Files\content</Filter>
-    </ClCompile>
-    <ClCompile Include="am_S_NameRegistrar.cpp">
-      <Filter>Source Files\association_model</Filter>
     </ClCompile>
     <ClCompile Include="am_NameRegistry.cpp">
       <Filter>Source Files\association_model</Filter>

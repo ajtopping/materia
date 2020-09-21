@@ -2,7 +2,7 @@
 
 amUuid am_UuidRegistry::Register(am_HasUuidRegistryTicket & ref)
 {
-	if ( !ref.get_uuid().isNil())
+	if ( ref.get_uuid().isNil())
 	{
 		throw invalid_registration_error("am_UuidRegistry::Register : cannot register object because its uuid is Nil (cannot register a Nil uuid).\n");
 	}

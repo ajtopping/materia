@@ -26,20 +26,20 @@ namespace util
 		}
 
 		template <class T>
-		T GetComponent(amUuid owner_uuid)
+		T & GetComponent(amUuid owner_uuid)
 		{
 			amUuid component_uuid = owner_to_component_<T>.find(owner_uuid);
 			std::string error_msg = "util::component::GetComponent : ";
 
 			if (component_uuid.isNil())
 			{
-				error_msg += "owner_uuid has no corresponding component_uuid for component type " + typeid(T).name() + " / n";
+				error_msg += "owner_uuid has no corresponding component_uuid for component type " + std::string(typeid(T).name()) + " / n";
 				throw no_valid_component_error(error_msg);
 			}
 
 			if (!HasComponent<T>(owner_uuid))
 			{
-				error_msg += "the corresponding component_uuid has not been registered with util::uuid registry of type " + typeid(T).name() + " / n";
+				error_msg += "the corresponding component_uuid has not been registered with util::uuid registry of type " + std::string(typeid(T).name()) + " / n";
 				throw no_valid_component_error(error_msg);
 			}
 
@@ -55,7 +55,7 @@ namespace util
 			if (!util::uuid::HasRegisteredType<T>(component_uuid))
 			{
 				has_error = true;
-				error_msg += " component_uuid does not correspond to a component of type " + typeid(T).name() + "/n";
+				error_msg += " component_uuid does not correspond to a component of type " + std::string(typeid(T).name()) + "/n";
 			}
 
 			if (has_error)

@@ -26,28 +26,22 @@ namespace util
 		template <class T>
 		bool HasRegisteredType(amUuid uuid)
 		{
-			am_HasUuidRegistryTicket & ref;
-
 			try
 			{
-				ref = uuid_registry_.get(uuid);
+				am_HasUuidRegistryTicket & ref = uuid_registry_.get(uuid);
+				// Does am_HasUuidRegistryTicket need a virtual function?
+				dynamic_cast<T&>(ref);
 			}
 			catch (std::out_of_range e)
 			{
 				std::string error_msg = "util::uuid::HasRegisteredType : out_of_range: the given uuid has not been registered.\n";
-				fprintf(stdout, error_msg);
+				fprintf(stdout, error_msg.c_str());
 				return false;
-			}
-
-			try
-			{
-				// Does am_HasUuidRegistryTicket need a virtual function?
-				dynamic_cast<T&>(ref);
 			}
 			catch (std::bad_cast e)
 			{
 				std::string error_msg = "util::uuid::HasRegisteredType : bad_cast: the found reference cannot be cast to the given type.\n";
-				fprintf(stdout, error_msg);
+				fprintf(stdout, error_msg.c_str());
 				return false;
 			}
 

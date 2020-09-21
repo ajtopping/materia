@@ -1,10 +1,10 @@
 #include "pch.h"
 
-#include "../materia/am_NameRegistrar.cpp"
+#include "../materia/am_NameRegistry.cpp"
 
-TEST(am_NameRegistrarTest, HasNameAndUuid)
+TEST(am_NameRegistryTest, HasNameAndUuid)
 {
-	am_NameRegistrar nr;
+	am_NameRegistry nr;
 
 	amUuid uuid1;
 	amUuid uuid2;
@@ -27,7 +27,7 @@ TEST(am_NameRegistrarTest, HasNameAndUuid)
 
 TEST(am_S_NameRegistrarTest, ReplaceName)
 {
-	am_NameRegistrar nr;
+	am_NameRegistry nr;
 
 	amUuid uuid1;
 
@@ -41,9 +41,9 @@ TEST(am_S_NameRegistrarTest, ReplaceName)
 	EXPECT_EQ(found_name, name2);
 }
 
-TEST(am_NameRegistrarTest, ReplaceUuid)
+TEST(am_NameRegistryTest, ReplaceUuid)
 {
-	am_NameRegistrar nr;
+	am_NameRegistry nr;
 
 	amUuid uuid1;
 	amUuid uuid2;
@@ -57,9 +57,9 @@ TEST(am_NameRegistrarTest, ReplaceUuid)
 	EXPECT_EQ(found_uuid, uuid2);
 }
 
-TEST(am_NameRegistrarTest, ThrowExceptionOnDuplicateNameInsert)
+TEST(am_NameRegistryTest, ThrowExceptionOnDuplicateNameInsert)
 {
-	am_NameRegistrar nr;
+	am_NameRegistry nr;
 
 	amUuid uuid1;
 	amUuid uuid2;
@@ -71,9 +71,9 @@ TEST(am_NameRegistrarTest, ThrowExceptionOnDuplicateNameInsert)
 	EXPECT_THROW(nr.insert(name1, uuid2), invalid_name_insert_error);
 }
 
-TEST(am_NameRegistrarTest, ThrowExceptionOnDuplicateUuidInsert)
+TEST(am_NameRegistryTest, ThrowExceptionOnDuplicateUuidInsert)
 {
-	am_NameRegistrar nr;
+	am_NameRegistry nr;
 
 	amUuid uuid1;
 

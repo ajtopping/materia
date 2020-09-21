@@ -8,21 +8,21 @@ void entDraw::Draw(amUuid entity_uuid)
 		return;
 	}
 
-	Renderer & renderer_ptr = util::component::GetComponent<Renderer>(entity_uuid);
+	Renderer & renderer_ref = util::component::GetComponent<Renderer>(entity_uuid);
 	
-	mTransform * transform_ptr;
+	mTransform transform;
 
 	glm::mat4 camera_matrix = util::camera::GetActiveCameraViewMatrix();
 
-	if (util::component::HasComponent<mTransform *>(entity_uuid))
+	if (util::component::HasComponent<mTransform>(entity_uuid))
 	{
-		transform_ptr = util::component::GetComponent<mTransform *>(entity_uuid);
-		renderer_ptr.Draw(camera_matrix * transform_ptr->get_composition_matrix());
+		transform = util::component::GetComponent<mTransform>(entity_uuid);
+		renderer_ref.Draw(camera_matrix * transform.get_composition_matrix());
 	}
 	else
 	{
 		fprintf(stdout, "Entity has no mTransform. Using default...\n");
-		renderer_ptr.Draw(camera_matrix);
+		renderer_ref.Draw(camera_matrix);
 	}
 
 	

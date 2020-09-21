@@ -9,7 +9,7 @@ class amUuidRegistryTicket
 public:
 	amUuidRegistryTicket() { uuid_ = amUuid(0); }
 	amUuidRegistryTicket(amUuid uuid) { uuid_ = uuid; }
-	amUuidRegistryTicket(amUuidRegistryTicket const& ref) : amUuidRegistryTicket(ref.uuid_) {}; // is_registered = false // prevents erroneous deconstruction side effects
+	amUuidRegistryTicket(amUuidRegistryTicket const& ref) : uuid_(ref.uuid_) {}; // is_registered = false // prevents erroneous deconstruction side effects
 	void operator=(amUuidRegistryTicket const& ref) {
 		uuid_ = ref.uuid_;
 		is_registered_ = false;

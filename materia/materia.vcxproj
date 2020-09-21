@@ -180,7 +180,6 @@
     <ClInclude Include="am_Uuid_T.hpp" />
     <ClInclude Include="am_NameRegistry.h" />
     <ClInclude Include="am_S_Guid_entComposition.h" />
-    <ClInclude Include="am_S_NameRegistrar.h" />
     <ClInclude Include="am_S_ssRectangle_entComposition.h" />
     <ClInclude Include="am_S_UniqueUuidAssociator.h" />
     <ClInclude Include="am_S_amTptr.h" />
@@ -272,7 +271,6 @@
     <ClCompile Include="am_NameRegistry.cpp" />
     <ClCompile Include="am_ParentRegistry.cpp" />
     <ClCompile Include="am_S_Guid_entComposition.cpp" />
-    <ClCompile Include="am_S_NameRegistrar.cpp" />
     <ClCompile Include="am_S_UniqueUuidAssociator.cpp" />
     <ClCompile Include="am_UuidRegistry.cpp" />
     <ClCompile Include="Camera.cpp" />
